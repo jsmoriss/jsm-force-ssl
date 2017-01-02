@@ -13,7 +13,7 @@ Requires At Least: 3.7
 Tested Up To: 4.7
 Stable Tag: 1.0.1-1
 
-A quick and easy way to force all HTTP URLS to HTTPS with a permanent redirect.
+A quick and easy way to force HTTP webpage URLs to SSL / HTTPS with a permanent redirect.
 
 == Description ==
 
