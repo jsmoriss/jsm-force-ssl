@@ -12,7 +12,7 @@
  * Description: A quick and easy way to force all HTTP URLS to HTTPS with a permanent redirect.
  * Requires At Least: 3.7
  * Tested Up To: 4.7
- * Version: 1.0.0-1
+ * Version: 1.0.1-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -70,6 +70,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 					add_action( 'in_admin_header', array( $this, 'check_home_url' ), 900000 );
 				} elseif ( empty( $_SERVER['HTTPS'] ) ) {
 					add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
+					add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_https' ), 1000, 1 );
 				}
 			}
 		}
@@ -81,6 +82,15 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 				wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], 301 );
 				exit();
 			}
+		}
+
+		public static function upload_dir_https( $param ) {
+			foreach ( array( 'url', 'baseurl' ) as $key ) {
+				if ( ! empty( $_SERVER['HTTPS'] ) ) {
+					$param[$key] = preg_replace( '/^http:/', 'https:', $param[$key] );
+				}
+			}
+			return $param;
 		}
 
 		public function check_home_url() {

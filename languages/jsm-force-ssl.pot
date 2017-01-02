@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the JSM's Force SSL / HTTPS package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Force SSL / HTTPS 1.0.0-1\n"
+"Project-Id-Version: JSM's Force SSL / HTTPS 1.0.1-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-force-ssl\n"
 "POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -12,17 +12,17 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: jsm-force-ssl.php:93
+#: jsm-force-ssl.php:103
 msgid "Warning"
 msgstr ""
 
-#: jsm-force-ssl.php:94
+#: jsm-force-ssl.php:104
 msgid ""
 "HTTP URLs are being redirected to HTTPS but your Site Address (URL) is not "
 "an HTTPS URL."
 msgstr ""
 
-#: jsm-force-ssl.php:95
+#: jsm-force-ssl.php:105
 msgid ""
 "Please update the <a href=\"%1$s\">Site Address (URL) option in the "
 "WordPress General Settings page</a>."
