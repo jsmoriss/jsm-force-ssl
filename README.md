@@ -14,7 +14,7 @@
 
 <h2>Description</h2>
 
-<p>An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS.</p>
+<h4>An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS.</h4>
 
 <p>The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.</p>
 
@@ -24,7 +24,9 @@
 
 <p><strong>Requirements</strong></p>
 
-<p>Your web server must configured with an SSL certificate and able to handle HTTPS request.</p>
+<ul>
+<li>Your web server must configured with an SSL certificate and able to handle HTTPS request.</li>
+</ul>
 
 
 <h2>Installation</h2>

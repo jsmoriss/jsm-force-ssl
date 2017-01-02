@@ -17,7 +17,7 @@ A quick and easy way to force all HTTP URLS to HTTPS with a permanent redirect.
 
 == Description ==
 
-An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS.
+= An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS. =
 
 The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.
 
@@ -27,7 +27,7 @@ The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants
 
 **Requirements**
 
-Your web server must configured with an SSL certificate and able to handle HTTPS request.
+* Your web server must configured with an SSL certificate and able to handle HTTPS request.
 
 == Installation ==
 
