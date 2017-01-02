@@ -100,5 +100,5 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = 1.0.1-1 =
 
-(2017/01/03) Initial release.
+(2017/01/03) Added a filter for 'upload_dir' to change HTTP URLs to HTTPS.
 
