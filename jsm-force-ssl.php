@@ -9,7 +9,7 @@
  * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: Quick and easy way to force all HTTP URLS to HTTPS with a permanent redirect.
+ * Description: A quick and easy way to force all HTTP URLS to HTTPS with a permanent redirect.
  * Requires At Least: 3.7
  * Tested Up To: 4.7
  * Version: 1.0.0-1
@@ -69,7 +69,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 					load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 					add_action( 'in_admin_header', array( $this, 'check_home_url' ), 900000 );
 				} elseif ( empty( $_SERVER['HTTPS'] ) ) {
-					add_action( 'wp_loaded', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
+					add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
 				}
 			}
 		}
