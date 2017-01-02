@@ -19,7 +19,7 @@ A quick and easy way to force all HTTP URLS to HTTPS with a permanent redirect.
 
 **An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS.**
 
-The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.
+The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent. Also checks the WordPress 'upload_dir' URLs to make sure they are HTTPS when using HTTPS URLs.
 
 <blockquote>
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
@@ -85,12 +85,12 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 1.0.0-1 (2017/01/02)**
+**Version 1.0.1-1 (2017/01/03)**
 
 * *New Features*
-	* Initial release.
-* *Improvements*
 	* None
+* *Improvements*
+	* Added a filter for 'upload_dir' to change HTTP URLs to HTTPS.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -98,7 +98,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
-= 1.0.0-1 =
+= 1.0.1-1 =
 
-(2017/01/02) Initial release.
+(2017/01/03) Initial release.
 
