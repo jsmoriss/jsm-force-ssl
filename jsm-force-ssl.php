@@ -61,50 +61,30 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		}
 
 		public function __construct() {
-			$is_admin = is_admin();
-			$is_forced = defined( 'FORCE_SSL' ) && FORCE_SSL ? true : false;
-
-			if ( $is_forced ) {
-				if ( $is_admin ) {
-					load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
-					add_action( 'in_admin_header', array( $this, 'check_home_url' ), 900000 );
-				} elseif ( empty( $_SERVER['HTTPS'] ) ) {
-					add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
-					add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_https' ), 1000, 1 );
-				}
+			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
+				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
 			}
+			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_https' ), 1000, 1 );
 		}
 
 		public static function force_ssl_redirect() {
-			if ( empty( $_SERVER['HTTPS'] ) ) {	// just in case
-				// 301 redirect is considered a best practice for upgrading from HTTP to HTTPS
-				// see https://en.wikipedia.org/wiki/HTTP_301 for more info
+			if ( empty( $_SERVER['HTTPS'] ) ) {
+				/*
+				 * 301 redirect is considered a best practice for upgrading from HTTP to HTTPS.
+				 * See https://en.wikipedia.org/wiki/HTTP_301 for more info.
+				 */
 				wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], 301 );
 				exit();
 			}
 		}
 
 		public static function upload_dir_https( $param ) {
-			foreach ( array( 'url', 'baseurl' ) as $key ) {
-				if ( ! empty( $_SERVER['HTTPS'] ) ) {
+			if ( ! empty( $_SERVER['HTTPS'] ) ) {
+				foreach ( array( 'url', 'baseurl' ) as $key ) {
 					$param[$key] = preg_replace( '/^http:/', 'https:', $param[$key] );
 				}
 			}
 			return $param;
-		}
-
-		public function check_home_url() {
-			if ( strpos( home_url(), 'https' ) !== 0 )
-				add_action( 'all_admin_notices', array( $this, 'home_url_warning' ), -1000 );
-		}
-
-		public function home_url_warning() {
-			echo '<div class="notice notice-warning" style="display:block !important; visibility:visible !important;"><p>';
-			echo '<strong>'. __( 'Warning', 'jsm-force-ssl' ).'</strong> &mdash; ';
-			echo __( 'HTTP URLs are being redirected to HTTPS but your Site Address (URL) is not an HTTPS URL.', 'jsm-force-ssl' ).' '.
-				sprintf( __( 'Please update the <a href="%1$s">Site Address (URL) option in the WordPress General Settings page</a>.',
-					'jsm-force-ssl' ), get_admin_url( null, 'options-general.php' ) );
-			echo '</p></div>';
 		}
 	}
 

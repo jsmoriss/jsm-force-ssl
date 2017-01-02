@@ -12,22 +12,6 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: jsm-force-ssl.php:103
-msgid "Warning"
-msgstr ""
-
-#: jsm-force-ssl.php:104
-msgid ""
-"HTTP URLs are being redirected to HTTPS but your Site Address (URL) is not "
-"an HTTPS URL."
-msgstr ""
-
-#: jsm-force-ssl.php:105
-msgid ""
-"Please update the <a href=\"%1$s\">Site Address (URL) option in the "
-"WordPress General Settings page</a>."
-msgstr ""
-
 #. Plugin Name of the plugin/theme
 msgid "JSM's Force SSL / HTTPS"
 msgstr ""
