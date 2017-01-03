@@ -13,15 +13,15 @@ Requires At Least: 3.7
 Tested Up To: 4.7
 Stable Tag: 1.0.1-1
 
-A quick and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
+A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
 
 == Description ==
 
 **An effective way to make sure that all the HTTP URLs on your website get redirected to HTTPS, including the WordPress upload directory URL for images, etc.**
 
-The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.
+The plugin defines the `FORCE_SSL`, `FORCE_SSL_ADMIN`, and `FORCE_SSL_LOGIN` constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.
 
-The plugin also hooks the WordPress 'upload_dir' filter to make sure that upload directory URLs match the current webpage protocol.
+The plugin also hooks the WordPress 'upload_dir' filter to make sure that all upload directory URLs match the current webpage protocol.
 
 <blockquote>
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
@@ -29,7 +29,7 @@ The plugin also hooks the WordPress 'upload_dir' filter to make sure that upload
 
 **Requirements**
 
-* Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
+Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
 
 == Installation ==
 
