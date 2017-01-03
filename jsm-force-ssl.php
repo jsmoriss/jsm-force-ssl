@@ -12,7 +12,7 @@
  * Description: A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
  * Requires At Least: 3.7
  * Tested Up To: 4.7
- * Version: 1.0.1-1
+ * Version: 1.1.0-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -66,10 +66,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * 'init' action and check the protocol if FORCE_SSL is
 			 * true.
 			 */
-			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
+			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() )
 				add_action( 'init', array( __CLASS__,
 					'force_ssl_redirect' ), -9000 );
-			}
 
 			/*
 			 * Make sure URLs from the upload directory - like
@@ -93,7 +92,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
-			if ( empty( $_SERVER['HTTPS'] ) ) {
+			if ( ! self::is_https() ) {
 				wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].
 					$_SERVER['REQUEST_URI'], 301 );
 				exit();
@@ -108,11 +107,24 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		public static function upload_dir_urls( $param ) {
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
-				$param[$key] = empty( $_SERVER['HTTPS'] ) ?
-					preg_replace( '/^https:/', 'http:', $param[$key] ) :
-					preg_replace( '/^http:/', 'https:', $param[$key] );
+				$param[$key] = self::is_https() ?
+					preg_replace( '/^http:/', 'https:', $param[$key] ) :
+					preg_replace( '/^https:/', 'http:', $param[$key] );
 			}
 			return $param;
+		}
+
+
+		private static function is_https() {
+			if ( is_ssl() )		// since wp 2.6.0
+				return true;
+			elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 
+				strtolower( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) === 'https' )
+					return true;
+			elseif ( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 
+				strtolower( $_SERVER['HTTP_X_FORWARDED_SSL'] ) === 'on' )
+					return true;
+			else return false;
 		}
 	}
 
