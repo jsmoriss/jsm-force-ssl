@@ -64,25 +64,31 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
 				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
 			}
-			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_https' ), 1000, 1 );
+			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
 		}
 
+		/*
+		 * Redirect from HTTP to HTTPS if the current webpage URL is
+		 * not HTTPS. A 301 redirect is considered a best practice when
+		 * moving from HTTP to HTTPS. See
+		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
+		 */
 		public static function force_ssl_redirect() {
 			if ( empty( $_SERVER['HTTPS'] ) ) {
-				/*
-				 * 301 redirect is considered a best practice for upgrading from HTTP to HTTPS.
-				 * See https://en.wikipedia.org/wiki/HTTP_301 for more info.
-				 */
 				wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], 301 );
 				exit();
 			}
 		}
 
-		public static function upload_dir_https( $param ) {
-			if ( ! empty( $_SERVER['HTTPS'] ) ) {
-				foreach ( array( 'url', 'baseurl' ) as $key ) {
-					$param[$key] = preg_replace( '/^http:/', 'https:', $param[$key] );
-				}
+		/*
+		 * Make sure the upload_dir protocol (for uploaded images,
+		 * etc.) matches the webpage protocol.
+		 */
+		public static function upload_dir_urls( $param ) {
+			foreach ( array( 'url', 'baseurl' ) as $key ) {
+				$param[$key] = empty( $_SERVER['HTTPS'] ) ?
+					preg_replace( '/^https:/', 'http:', $param[$key] ) :
+					preg_replace( '/^http:/', 'https:', $param[$key] );
 			}
 			return $param;
 		}
