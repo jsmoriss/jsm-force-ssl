@@ -9,7 +9,7 @@
  * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: A quick and easy way to force HTTP webpage URLs to SSL / HTTPS with a permanent redirect.
+ * Description: A quick and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
  * Requires At Least: 3.7
  * Tested Up To: 4.7
  * Version: 1.0.1-1
