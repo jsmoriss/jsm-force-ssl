@@ -23,6 +23,8 @@ The plugin defines the `FORCE_SSL`, `FORCE_SSL_ADMIN`, and `FORCE_SSL_LOGIN` con
 
 The plugin also hooks the WordPress 'upload_dir' filter to make sure that all upload directory URLs match the current webpage protocol.
 
+The plugin checks and honors the proxy / load-balancing `HTTP_X_FORWARDED_PROTO` and `HTTP_X_FORWARDED_SSL` web server variables.
+
 <blockquote>
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
 </blockquote>
@@ -87,20 +89,20 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 1.0.1-1 (2017/01/03)**
+**Version 1.1.0-1 (2017/01/04)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* Added a filter for 'upload_dir' to change HTTP URLs to HTTPS.
+	* Added support for proxy / load-balancing web server variables.
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* None
+	* Added an is_https() static method to check is_ssl(), along with the 'HTTP_X_FORWARDED_PROTO' and 'HTTP_X_FORWARDED_SSL' web server variables.
 
 == Upgrade Notice ==
 
-= 1.0.1-1 =
+= 1.1.0-1 =
 
-(2017/01/03) Added a filter for 'upload_dir' to change HTTP URLs to HTTPS.
+(2016/01/04) Added support for proxy / load-balancing web server variables.
 
