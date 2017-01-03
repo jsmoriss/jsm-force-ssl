@@ -114,7 +114,11 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return $param;
 		}
 
-
+		/*
+		 * Extend the WordPress is_ssl() function by also checking for
+		 * proxy / load-balancing 'HTTP_X_FORWARDED_PROTO' and
+		 * 'HTTP_X_FORWARDED_SSL' web server variables.
+		 */
 		private static function is_https() {
 			if ( is_ssl() )		// since wp 2.6.0
 				return true;
