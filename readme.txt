@@ -17,7 +17,7 @@ A quick and easy way to force HTTP webpage URLs to SSL / HTTPS with a permanent 
 
 == Description ==
 
-**An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS, including upload directory URLs.**
+**An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS, including upload directory URLs for images, etc.**
 
 The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.
 
