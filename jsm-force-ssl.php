@@ -67,7 +67,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * true.
 			 */
 			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
-				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
+				add_action( 'init', array( __CLASS__,
+					'force_ssl_redirect' ), -9000 );
 			}
 
 			/*
@@ -75,7 +76,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * images in the Media Library - use the correct
 			 * protocol.
 			 */
-			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
+			add_filter( 'upload_dir', array( __CLASS__,
+				'upload_dir_urls' ), 1000, 1 );
 		}
 
 		public static function &get_instance() {
@@ -92,7 +94,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		public static function force_ssl_redirect() {
 			if ( empty( $_SERVER['HTTPS'] ) ) {
-				wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], 301 );
+				wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].
+					$_SERVER['REQUEST_URI'], 301 );
 				exit();
 			}
 		}
