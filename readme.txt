@@ -17,7 +17,7 @@ A quick and effective way to force webpage and upload directory URLs from HTTP t
 
 == Description ==
 
-**An effective way to make sure that all HTTP URLs on your website get redirected to HTTPS, including WordPress upload directory URLs for images, etc.**
+**An effective way to make sure that all the HTTP URLs on your website get redirected to HTTPS, including the WordPress upload directory URL for images, etc.**
 
 The plugin defines the FORCE_SSL, FORCE_SSL_ADMIN, and FORCE_SSL_LOGIN constants, then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.
 
