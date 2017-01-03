@@ -7,7 +7,7 @@ License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Donate Link: https://www.paypal.me/jsmoriss
 Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
-Tags: force, ssl, https, permament, redirect, force_ssl
+Tags: force, ssl, https, permament, redirect, force_ssl, upload_dir
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7
@@ -29,7 +29,7 @@ The plugin also hooks the WordPress 'upload_dir' filter to make sure that upload
 
 **Requirements**
 
-* Your web server must configured with an SSL certificate and able to handle HTTPS request.
+* Your web server must configured with an SSL certificate and able to handle HTTPS request. ;-)
 
 == Installation ==
 

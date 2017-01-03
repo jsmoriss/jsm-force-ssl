@@ -9,7 +9,7 @@
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>Website URL</th><td><a href="https://www.paypal.me/jsmoriss">https://www.paypal.me/jsmoriss</a></td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>force, ssl, https, permament, redirect, force_ssl</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>force, ssl, https, permament, redirect, force_ssl, upload_dir</td></tr>
 </table>
 
 <h2>Description</h2>
@@ -27,7 +27,7 @@
 <p><strong>Requirements</strong></p>
 
 <ul>
-<li>Your web server must configured with an SSL certificate and able to handle HTTPS request.</li>
+<li>Your web server must configured with an SSL certificate and able to handle HTTPS request. ;-)</li>
 </ul>
 
 
