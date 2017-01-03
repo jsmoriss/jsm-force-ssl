@@ -9,7 +9,7 @@
  * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: A quick and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
+ * Description: A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
  * Requires At Least: 3.7
  * Tested Up To: 4.7
  * Version: 1.0.1-1
@@ -39,6 +39,11 @@
 if ( ! defined( 'ABSPATH' ) ) 
 	die( 'These aren\'t the droids you\'re looking for...' );
 
+/*
+ * Define some standard WordPress constants, if not already defined. These
+ * constants can be pre-defined as false in wp-config.php to turn disable a
+ * specific forced SSL feature.
+ */
 if ( ! defined( 'FORCE_SSL' ) )
 	define( 'FORCE_SSL', true );
 
@@ -54,17 +59,29 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		private static $instance;
 
+		public function __construct() {
+			/*
+			 * WordPress should redirect back-end / admin URLs just
+			 * fine, but the front-end may need some help. Hook the
+			 * 'init' action and check the protocol if FORCE_SSL is
+			 * true.
+			 */
+			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
+				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
+			}
+
+			/*
+			 * Make sure URLs from the upload directory - like
+			 * images in the Media Library - use the correct
+			 * protocol.
+			 */
+			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
+		}
+
 		public static function &get_instance() {
 			if ( ! isset( self::$instance ) )
 				self::$instance = new self;
 			return self::$instance;
-		}
-
-		public function __construct() {
-			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
-				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
-			}
-			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
 		}
 
 		/*
@@ -81,8 +98,10 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		}
 
 		/*
-		 * Make sure the upload_dir protocol (for uploaded images,
-		 * etc.) matches the webpage protocol.
+		 * Make sure URLs from the upload directory - like images in
+		 * the Media Library - use the correct protocol. Adjusts the
+		 * 'url' and 'baseurl' array keys to match the current protocol
+		 * being used (HTTP or HTTPS).
 		 */
 		public static function upload_dir_urls( $param ) {
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
