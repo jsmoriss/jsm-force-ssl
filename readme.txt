@@ -29,7 +29,7 @@ The plugin also hooks the WordPress 'upload_dir' filter to make sure that upload
 
 **Requirements**
 
-* Your web server must configured with an SSL certificate and able to handle HTTPS request. ;-)
+* Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
 
 == Installation ==
 
