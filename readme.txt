@@ -9,7 +9,7 @@ Donate Link: https://www.paypal.me/jsmoriss
 Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
 Tags: force, ssl, https, permament, redirect, force_ssl, force_ssl_admin, force_ssl_login, upload, upload_dir, proxy, load-balancing
 Contributors: jsmoriss
-Requires At Least: 3.7
+Requires At Least: 3.8
 Tested Up To: 4.7.2
 Stable Tag: 1.1.0-1
 
