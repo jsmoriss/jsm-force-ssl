@@ -89,6 +89,17 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 1.1.1-1 (2017/02/10)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added a check (and fix) for relative URLs coming from the WordPress Media Library.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 1.1.0-1 (2017/01/04)**
 
 * *New Features*
@@ -101,6 +112,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* Added an is_https() static method to check is_ssl(), along with the 'HTTP_X_FORWARDED_PROTO' and 'HTTP_X_FORWARDED_SSL' web server variables.
 
 == Upgrade Notice ==
+
+= 1.1.1-1 =
+
+(2016/02/10) Added a check (and fix) for relative URLs coming from the WordPress Media Library.
 
 = 1.1.0-1 =
 
