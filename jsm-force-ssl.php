@@ -12,7 +12,7 @@
  * Description: A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
  * Requires At Least: 3.8
  * Tested Up To: 4.7.2
- * Version: 1.1.0-1
+ * Version: 1.1.1-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -107,9 +107,15 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		public static function upload_dir_urls( $param ) {
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
-				$param[$key] = self::is_https() ?
-					preg_replace( '/^http:/', 'https:', $param[$key] ) :
-					preg_replace( '/^https:/', 'http:', $param[$key] );
+				if ( strpos( $param[$key], '//' ) === 0 ) {	// check for relative urls
+					$param[$key] = self::is_https() ?
+						'https:'.$param[$key] :
+						'http:'.$param[$key];
+				} else {
+					$param[$key] = self::is_https() ?
+						preg_replace( '/^http:/', 'https:', $param[$key] ) :
+						preg_replace( '/^https:/', 'http:', $param[$key] );
+				}
 			}
 			return $param;
 		}
