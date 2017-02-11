@@ -89,7 +89,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 1.1.1-1 (2017/02/10)**
+**Version 1.1.1-1 (2017/02/11)**
 
 * *New Features*
 	* None
@@ -115,7 +115,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = 1.1.1-1 =
 
-(2016/02/10) Added a check (and fix) for relative URLs coming from the WordPress Media Library.
+(2016/02/11) Added a check (and fix) for relative URLs coming from the WordPress Media Library.
 
 = 1.1.0-1 =
 
