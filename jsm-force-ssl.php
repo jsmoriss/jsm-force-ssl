@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
  * Requires At Least: 3.8
- * Tested Up To: 4.7.2
+ * Tested Up To: 4.7.3
  * Version: 1.1.1-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
