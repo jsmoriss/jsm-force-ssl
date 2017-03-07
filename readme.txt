@@ -10,7 +10,7 @@ Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
 Tags: force, ssl, https, permament, redirect, force_ssl, force_ssl_admin, force_ssl_login, upload, upload_dir, proxy, load-balancing
 Contributors: jsmoriss
 Requires At Least: 3.8
-Tested Up To: 4.7.2
+Tested Up To: 4.7.3
 Stable Tag: 1.1.1-1
 
 A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
