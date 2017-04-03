@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
-Tags: force, ssl, https, permament, redirect, force_ssl, force_ssl_admin, force_ssl_login, upload, upload_dir, proxy, load-balancing
+Tags: redirect, force, ssl, https, upload, force_ssl, force_ssl_admin, force_ssl_login, upload_dir, proxy, load balancing, permanent
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3

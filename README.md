@@ -8,7 +8,7 @@
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.7.3</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>force, ssl, https, permament, redirect, force_ssl, force_ssl_admin, force_ssl_login, upload, upload_dir, proxy, load-balancing</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>redirect, force, ssl, https, upload, force_ssl, force_ssl_admin, force_ssl_login, upload_dir, proxy, load balancing, permanent</td></tr>
 </table>
 
 <h2>Description</h2>
