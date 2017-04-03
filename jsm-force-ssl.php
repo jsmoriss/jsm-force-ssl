@@ -12,7 +12,7 @@
  * Description: A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.3
- * Version: 1.1.1-1
+ * Version: 1.1.2-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -36,22 +36,26 @@
  * Copyright 2017 Jean-Sebastien Morisset (https://surniaulula.com/)
  */
 
-if ( ! defined( 'ABSPATH' ) ) 
+if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for...' );
+}
 
 /*
  * Define some standard WordPress constants, if not already defined. These
  * constants can be pre-defined as false in wp-config.php to turn disable a
  * specific forced SSL feature.
  */
-if ( ! defined( 'FORCE_SSL' ) )
+if ( ! defined( 'FORCE_SSL' ) ) {
 	define( 'FORCE_SSL', true );
+}
 
-if ( ! defined( 'FORCE_SSL_ADMIN' ) )
+if ( ! defined( 'FORCE_SSL_ADMIN' ) ) {
 	define( 'FORCE_SSL_ADMIN', true );
+}
 
-if ( ! defined( 'FORCE_SSL_LOGIN' ) )
+if ( ! defined( 'FORCE_SSL_LOGIN' ) ) {
 	define( 'FORCE_SSL_LOGIN', true );
+}
 
 if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
@@ -66,22 +70,22 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * 'init' action and check the protocol if FORCE_SSL is
 			 * true.
 			 */
-			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() )
-				add_action( 'init', array( __CLASS__,
-					'force_ssl_redirect' ), -9000 );
+			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
+				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
+			}
 
 			/*
 			 * Make sure URLs from the upload directory - like
 			 * images in the Media Library - use the correct
 			 * protocol.
 			 */
-			add_filter( 'upload_dir', array( __CLASS__,
-				'upload_dir_urls' ), 1000, 1 );
+			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
 		}
 
 		public static function &get_instance() {
-			if ( ! isset( self::$instance ) )
+			if ( ! isset( self::$instance ) ) {
 				self::$instance = new self;
+			}
 			return self::$instance;
 		}
 
@@ -92,10 +96,12 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
-			if ( ! self::is_https() ) {
-				wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].
-					$_SERVER['REQUEST_URI'], 301 );
-				exit();
+			// check for web server variables in case WP is being called from the command line
+			if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
+				if ( ! self::is_https() ) {
+					wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], 301 );
+					exit();
+				}
 			}
 		}
 
@@ -126,15 +132,17 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * 'HTTP_X_FORWARDED_SSL' web server variables.
 		 */
 		private static function is_https() {
-			if ( is_ssl() )		// since wp 2.6.0
+			if ( is_ssl() ) {		// since wp 2.6.0
 				return true;
-			elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 
-				strtolower( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) === 'https' )
-					return true;
-			elseif ( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 
-				strtolower( $_SERVER['HTTP_X_FORWARDED_SSL'] ) === 'on' )
-					return true;
-			else return false;
+			} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 
+				strtolower( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) === 'https' ) {
+				return true;
+			} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 
+				strtolower( $_SERVER['HTTP_X_FORWARDED_SSL'] ) === 'on' ) {
+				return true;
+			} else {
+				return false;
+			}
 		}
 	}
 
