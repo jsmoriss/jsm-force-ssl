@@ -10,7 +10,7 @@ Tags: force, ssl, https, permament, redirect, force_ssl, force_ssl_admin, force_
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3
-Stable Tag: 1.1.1-1
+Stable Tag: 1.1.2-1
 
 A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
 
@@ -88,12 +88,23 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 1.1.2-1 (2017/04/03)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added a check for web server variables in case WP is being called from the command-line.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 1.1.1-1 (2017/02/12)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* Added a check (and fix) for relative URLs coming from the WordPress Media Library.
+	* Added a check and fix for relative URLs coming from the WordPress Media Library.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -112,9 +123,13 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
+= 1.1.2-1 =
+
+(2016/04/03) Added a check for web server variables in case WP is being called from the command-line.
+
 = 1.1.1-1 =
 
-(2016/02/12) Added a check (and fix) for relative URLs coming from the WordPress Media Library.
+(2016/02/12) Added a check and fix for relative URLs coming from the WordPress Media Library.
 
 = 1.1.0-1 =
 
