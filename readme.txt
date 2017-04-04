@@ -12,7 +12,7 @@ Requires At Least: 3.7
 Tested Up To: 4.7.3
 Stable Tag: 1.1.2-1
 
-A simple and effective way to force webpage and upload directory URLs from HTTP to HTTPS with a permanent redirect.
+A simple and effective plugin to force webpage and media library URLs from HTTP to HTTPS with a permanent redirect.
 
 == Description ==
 
