@@ -93,7 +93,7 @@ Note that the production stage level can be incremented on occasion for simple t
 * *New Features*
 	* None
 * *Improvements*
-	* Added a check for web server variables in case WP is being called from the command-line.
+	* Added a check for web server variables in case WP is being used from the command-line.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -125,7 +125,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = 1.1.2-1 =
 
-(2016/04/03) Added a check for web server variables in case WP is being called from the command-line.
+(2016/04/03) Added a check for web server variables in case WP is being used from the command-line.
 
 = 1.1.1-1 =
 
