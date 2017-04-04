@@ -96,7 +96,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
-			// check for web server variables in case WP is being called from the command line
+			// check for web server variables in case WP is being used from the command line
 			if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
 				if ( ! self::is_https() ) {
 					wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], 301 );
