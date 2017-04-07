@@ -75,7 +75,7 @@ Your web server must be configured with an SSL certificate and able to handle HT
 * [GitHub](https://jsmoriss.github.io/jsm-force-ssl/)
 * [WordPress.org](https://wordpress.org/plugins/jsm-force-ssl/developers/)
 
-= Version Numbering Scheme =
+= Version Numbering =
 
 Version components: `{major}.{minor}.{bugfix}-{stage}{level}`
 
