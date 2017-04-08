@@ -86,50 +86,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 1.1.2-1 (2017/04/03)**
+**Version 1.1.3 (2017/04/08)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* Added a check for web server variables in case WP is being used from the command-line.
+	* None
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* None
-
-**Version 1.1.1-1 (2017/02/12)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added a check and fix for relative URLs coming from the WordPress Media Library.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
-**Version 1.1.0-1 (2017/01/04)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added support for proxy / load-balancing web server variables.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Added an is_https() static method to check is_ssl(), along with the 'HTTP_X_FORWARDED_PROTO' and 'HTTP_X_FORWARDED_SSL' web server variables.
+	* Maintenance release - update to version numbering scheme.
+	* Dropped the package number from the production version string.
 
 == Upgrade Notice ==
 
-= 1.1.2-1 =
+= 1.1.3 =
 
-(2016/04/03) Added a check for web server variables in case WP is being used from the command-line.
-
-= 1.1.1-1 =
-
-(2016/02/12) Added a check and fix for relative URLs coming from the WordPress Media Library.
-
-= 1.1.0-1 =
-
-(2016/01/04) Added support for proxy / load-balancing web server variables.
+(2017/04/08) Maintenance release - update to version numbering scheme.
 
