@@ -28,7 +28,10 @@ The plugin defines the following constants (if not already defined), then makes 
 
 The plugin also hooks the WordPress 'upload_dir' filter, to make sure that all upload directory URLs match the required protocol.
 
-The plugin checks and honors the proxy / load-balancing `HTTP_X_FORWARDED_PROTO` and `HTTP_X_FORWARDED_SSL` web server variables.
+The plugin checks and honors the following proxy / load-balancing web server variables:
+
+* HTTP_X_FORWARDED_PROTO
+* HTTP_X_FORWARDED_SSL
 
 <blockquote>
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
