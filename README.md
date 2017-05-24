@@ -15,7 +15,7 @@
 
 <p><strong>An fast and effective way to make sure that all the HTTP URLs get redirected to HTTPS, including the WordPress upload folder for uploaded images and media.</strong></p>
 
-<p><strong>This plugin is significantly different than most other plugins of its type</strong> &mdash; other plugins generally create an output filter using <a href="http://php.net/manual/en/function.ob-start.php">PHP's output buffering</a> to search / replace URLs within the webpage document. This is much slower (and error prone) than using the WordPress 'upload_dir' filter and permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which is considered best practive when moving from HTTP to HTTPS</a>).</p>
+<p><strong>This plugin is significantly different than most other plugins of its type</strong> &mdash; other plugins generally create an output filter using <a href="http://php.net/manual/en/function.ob-start.php">PHP's output buffering</a> to search / replace URLs within the webpage document. This is much slower (and error prone) than using the WordPress 'upload_dir' filter and permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which is considered best practice when moving from HTTP to HTTPS</a>).</p>
 
 <p>The plugin defines the following constants (if not already defined), then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent:</p>
 
