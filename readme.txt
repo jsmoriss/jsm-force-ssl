@@ -20,7 +20,11 @@ A fast and effective plugin to force webpage and media library URLs from HTTP to
 
 **This plugin is significantly different than most other plugins of its type** &mdash; other plugins usually create an output filter using [PHP's output buffering](http://php.net/manual/en/function.ob-start.php) to search / replace URLs within the webpage document. This is much slower (and error prone) than using the WordPress 'upload_dir' filter and permanent (301) redirects ([which is considered best practive when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
-The plugin defines the `FORCE_SSL`, `FORCE_SSL_ADMIN`, and `FORCE_SSL_LOGIN` constants (if not already defined), then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent.
+The plugin defines the following constants (if not already defined), then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent:
+
+* FORCE_SSL
+* FORCE_SSL_ADMIN
+* FORCE_SSL_LOGIN
 
 The plugin also hooks the WordPress 'upload_dir' filter, to make sure that all upload directory URLs match the required protocol.
 
