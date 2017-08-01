@@ -5,7 +5,7 @@
 <tr><th align="right" valign="top" nowrap>Summary</th><td>A fast and effective plugin to force webpage and media library URLs from HTTP to HTTPS with a permanent redirect.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.1.3</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.7</td></tr>
-<tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.8</td></tr>
+<tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.8.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>redirect, force, ssl, https, upload, force_ssl, force_ssl_admin, force_ssl_login, upload_dir, proxy, load balancing, permanent</td></tr>
