@@ -10,6 +10,7 @@ Tags: redirect, force, ssl, https, upload, force_ssl, force_ssl_admin, force_ssl
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.8.1
+Requires PHP: 5.3
 Stable Tag: 1.1.3
 
 A fast and effective plugin to force webpage and media library URLs from HTTP to HTTPS with a permanent redirect.
