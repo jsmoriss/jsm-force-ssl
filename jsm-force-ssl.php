@@ -12,6 +12,7 @@
  * Description: A simple and effective plugin to force webpage and media library URLs from HTTP to HTTPS with a permanent redirect.
  * Requires At Least: 3.7
  * Tested Up To: 4.8.1
+ * Requires PHP: 5.3
  * Version: 1.1.3
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
