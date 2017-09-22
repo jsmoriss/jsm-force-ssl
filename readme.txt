@@ -13,21 +13,21 @@ Tested Up To: 4.8.2
 Requires PHP: 5.3
 Stable Tag: 1.1.3
 
-A fast and effective plugin to force webpage and media library URLs from HTTP to HTTPS with a permanent redirect.
+Safe, amazingly fast, simple and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
 
 == Description ==
 
-**An fast and effective way to make sure that all the HTTP URLs get redirected to HTTPS, including the WordPress upload folder for uploaded images and media.**
+**A safe, amazingly fast, simple and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS, including the WordPress upload folder and plugin url paths.**
 
-**This plugin is significantly different than most other plugins of its type** &mdash; other plugins generally create an output filter using [PHP's output buffering](http://php.net/manual/en/function.ob-start.php) to search / replace URLs within the webpage document. This is much slower (and error prone) than using the WordPress 'upload_dir' filter and permanent (301) redirects ([which is considered best practive when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+**This plugin is significantly different than most other plugins of its type** &mdash; other plugins generally create an output filter using [PHP's output buffering](http://php.net/manual/en/function.ob-start.php) to search / replace URLs within the webpage document. This is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects ([which is considered best practive when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
-The plugin defines the following constants (if not already defined), then makes sure that all front-end HTTP requests are redirected to their HTTPS equivalent:
+The plugin defines the following constants (if not already defined), then makes sure that all HTTP requests are rewritten / redirected to their HTTPS equivalent:
 
 * FORCE_SSL
 * FORCE_SSL_ADMIN
 * FORCE_SSL_LOGIN
 
-The plugin also hooks the WordPress 'upload_dir' filter, to make sure that all upload directory URLs match the required protocol.
+The plugin also hooks the WordPress 'upload_dir' and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.
 
 The plugin checks and honors the following proxy / load-balancing web server variables:
 
@@ -96,21 +96,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 1.1.3 (2017/04/08)**
+**Version 1.2.0 (2017/09/22)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* None
+	* Added checks to leave relative urls unchanged.
+	* Added a filter for the WordPress plugins_url() function.
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Maintenance release - update to version numbering scheme.
-	* Dropped the package number from the production version string.
+	* Refactored several class methods that check and update url strings.
 
 == Upgrade Notice ==
 
-= 1.1.3 =
+= 1.2.0 =
 
-(2017/04/08) Maintenance release - update to version numbering scheme.
+(2017/09/22) Added checks to leave relative urls unchanged. Added a filter for the WordPress plugins_url() function. Refactored several class methods.
 
