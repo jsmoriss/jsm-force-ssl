@@ -9,11 +9,11 @@
  * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: A simple and effective plugin to force webpage and media library URLs from HTTP to HTTPS with a permanent redirect.
+ * Description: Safe, amazingly fast, simple and effective - force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
  * Requires At Least: 3.7
  * Tested Up To: 4.8.2
  * Requires PHP: 5.3
- * Version: 1.1.3
+ * Version: 1.2.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -69,6 +69,13 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * protocol.
 			 */
 			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
+
+
+			/*
+			 * Adjust the URL returned by the WordPress
+			 * plugins_url() function.
+			 */
+			add_filter( 'plugins_url', array( __CLASS__, 'plugins_url' ), 1000, 1 );
 		}
 
 		public static function &get_instance() {
@@ -85,10 +92,14 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
-			// check for web server variables in case WP is being used from the command line
+			/*
+			 * Make sure web server variables exist in case WP is
+			 * being used from the command line.
+			 */
 			if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
 				if ( ! self::is_https() ) {
-					wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], 301 );
+					wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].
+						$_SERVER['REQUEST_URI'], 301 );
 					exit();
 				}
 			}
@@ -102,17 +113,13 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		public static function upload_dir_urls( $param ) {
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
-				if ( strpos( $param[$key], '//' ) === 0 ) {	// check for relative urls
-					$param[$key] = self::is_https() ?
-						'https:'.$param[$key] :
-						'http:'.$param[$key];
-				} else {
-					$param[$key] = self::is_https() ?
-						preg_replace( '/^http:/', 'https:', $param[$key] ) :
-						preg_replace( '/^https:/', 'http:', $param[$key] );
-				}
+				$param[$key] = self::update_prot( $param[$key] );
 			}
 			return $param;
+		}
+
+		public static function plugins_url( $url ) {
+			return self::update_prot( $url );
 		}
 
 		/*
@@ -120,18 +127,56 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * proxy / load-balancing 'HTTP_X_FORWARDED_PROTO' and
 		 * 'HTTP_X_FORWARDED_SSL' web server variables.
 		 */
-		private static function is_https() {
-			if ( is_ssl() ) {		// since wp 2.6.0
-				return true;
-			} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 
-				strtolower( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) === 'https' ) {
-				return true;
-			} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 
-				strtolower( $_SERVER['HTTP_X_FORWARDED_SSL'] ) === 'on' ) {
-				return true;
-			} else {
-				return false;
+		private static function is_https( $url = '' ) {
+			static $cache = array();
+			if ( isset( $cache[$url] ) ) {
+				return $cache[$url];
 			}
+			if ( ! empty( $url ) ) {
+				if ( strpos( $url, '://' ) && 
+					parse_url( $url, PHP_URL_SCHEME ) === 'https' ) {
+					return $cache[$url] = true;
+				} else {
+					return $cache[$url] = false;
+				}
+			} else {
+				if ( is_ssl() ) {
+					return $cache[$url] = true;
+				} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 
+					strtolower( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) === 'https' ) {
+					return $cache[$url] = true;
+				} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 
+					strtolower( $_SERVER['HTTP_X_FORWARDED_SSL'] ) === 'on' ) {
+					return $cache[$url] = true;
+				}
+			}
+			return $cache[$url] = false;
+		}
+
+		private static function get_prot( $url = '' ) {
+			if ( ! empty( $url ) ) {
+				return self::is_https( $url ) ? 'https' : 'http';
+			} elseif ( self::is_https() ) {
+				return 'https';
+			} elseif ( is_admin() )  {
+				if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ) {
+					return 'https';
+				}
+			} elseif ( defined( 'FORCE_SSL' ) && FORCE_SSL ) {
+				return 'https';
+			}
+			return 'http';
+		}
+
+		private static function update_prot( $url = '' ) {
+			if ( strpos( $url, '/' ) === 0 ) {	// skip relative urls
+				return $url;
+			}
+			$prot_slash = self::get_prot().'://';
+			if ( strpos( $url, $prot_slash ) === 0 ) {	// skip correct urls
+				return $url;
+			}
+			return preg_replace( '/^([a-z]+:\/\/)/', $prot_slash, $url );
 		}
 	}
 
