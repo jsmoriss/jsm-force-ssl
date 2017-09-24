@@ -53,6 +53,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		private static $instance;
 
 		public function __construct() {
+
+			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
+
 			/*
 			 * WordPress should redirect back-end / admin URLs just
 			 * fine, but the front-end may need some help. Hook the
@@ -83,6 +86,10 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 				self::$instance = new self;
 			}
 			return self::$instance;
+		}
+
+		public static function load_textdomain() {
+			load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 		}
 
 		/*
