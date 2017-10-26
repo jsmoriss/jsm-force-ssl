@@ -1,4 +1,4 @@
-<h1>JSM&#039;s Force SSL / HTTPS - Safe, Fast, Simple and Effective</h1><h3>Activate and Done!</h3>
+<h1>JSM&#039;s Force SSL / HTTPS - Safe, Fast, Simple and Effective</h1><h3>Activate to Enable / Deactivate to Disable</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force SSL / HTTPS</td></tr>
