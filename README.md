@@ -1,4 +1,4 @@
-<h1>JSM&#039;s Force SSL / HTTPS</h1><h3>Safe, Fast, Simple and Effective</h3>
+<h1>JSM&#039;s Force SSL / HTTPS - Safe, Fast, Simple and Effective</h1><h3>Activate and Done!</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force SSL / HTTPS</td></tr>
@@ -13,7 +13,7 @@
 
 <h2>Description</h2>
 
-<p><strong>A safe, fast, simple and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS, including the WordPress upload folder and plugin url paths.</strong></p>
+<p><strong>A safe, fast, simple and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS</strong>, including the WordPress upload folder and plugin url paths. Simply activate the plugin and you're done. ;-)</p>
 
 <p><strong>This plugin is significantly different than most other plugins of its type (in a good way)</strong> &mdash; other plugins generally create an output filter using <a href="http://php.net/manual/en/function.ob-start.php">PHP's output buffering</a> to search / replace URLs within the webpage document. This is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which is considered best practive when moving from HTTP to HTTPS</a>).</p>
 
