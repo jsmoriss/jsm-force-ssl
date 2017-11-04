@@ -1,4 +1,4 @@
-=== JSM's Force SSL / HTTPS - Fast, Safe, Simple and Effective - Simply Activate to Enable / Deactivate to Disable ===
+=== JSM's Force SSL / HTTPS - Fast, Simple, Safe and Effective - Simply Activate to Enable / Deactivate to Disable ===
 Plugin Name: JSM's Force SSL / HTTPS
 Plugin Slug: jsm-force-ssl
 Text Domain: jsm-force-ssl
@@ -13,11 +13,11 @@ Requires At Least: 3.7
 Tested Up To: 4.8.3
 Stable Tag: 1.2.0
 
-Fast, safe, simple and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
+Fast, simple, safe and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
 
 == Description ==
 
-**A fast, safe, simple and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS** &mdash; including the WordPress upload folder and plugin url paths. Simply activate the plugin and you're done. ;-)
+**A fast, simple, safe and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS** &mdash; including the WordPress upload folder and plugin url paths. Simply activate the plugin and you're done. ;-)
 
 **This plugin is significantly different than most other plugins of its type (in a good way)** &mdash; other plugins generally create an output filter using [PHP's output buffering](http://php.net/manual/en/function.ob-start.php) to search / replace URLs within the webpage document. Using an output filter is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects ([which is considered best practive when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
