@@ -1,4 +1,4 @@
-=== JSM's Force SSL / HTTPS - Fast, Simple, Safe and Effective - Simply Activate to Enable / Deactivate to Disable ===
+=== JSM's Force SSL / HTTPS - Fast, Simple, Safe and Effective ===
 Plugin Name: JSM's Force SSL / HTTPS
 Plugin Slug: jsm-force-ssl
 Text Domain: jsm-force-ssl
