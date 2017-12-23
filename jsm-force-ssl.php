@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: JSM's Force SSL / HTTPS
  * Text Domain: jsm-force-ssl
@@ -34,6 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * constants can be pre-defined as false in wp-config.php to turn disable a
  * specific forced SSL feature.
  */
+
 if ( ! defined( 'FORCE_SSL' ) ) {
 	define( 'FORCE_SSL', true );
 }
