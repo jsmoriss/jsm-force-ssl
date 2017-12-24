@@ -34,9 +34,7 @@ The plugin checks and honors the following proxy / load-balancing web server var
 * HTTP_X_FORWARDED_PROTO
 * HTTP_X_FORWARDED_SSL
 
-<blockquote>
-<p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
-</blockquote>
+There are no plugin settings &mdash; simply install and activate the plugin.
 
 **Requirements**
 

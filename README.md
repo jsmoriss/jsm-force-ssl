@@ -34,9 +34,7 @@
 <li>HTTP_X_FORWARDED_SSL</li>
 </ul>
 
-<blockquote>
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
-</blockquote>
 
 <p><strong>Requirements</strong></p>
 
