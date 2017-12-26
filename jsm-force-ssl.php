@@ -58,7 +58,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 
-			/*
+			/**
 			 * WordPress should redirect back-end / admin URLs just
 			 * fine, but the front-end may need some help. Hook the
 			 * 'init' action and check the protocol if FORCE_SSL is
@@ -68,7 +68,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
 			}
 
-			/*
+			/**
 			 * Make sure URLs from the upload directory - like
 			 * images in the Media Library - use the correct
 			 * protocol.
@@ -76,7 +76,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
 
 
-			/*
+			/**
 			 * Adjust the URL returned by the WordPress
 			 * plugins_url() function.
 			 */
@@ -94,27 +94,26 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 		}
 
-		/*
+		/**
 		 * Redirect from HTTP to HTTPS if the current webpage URL is
 		 * not HTTPS. A 301 redirect is considered a best practice when
 		 * moving from HTTP to HTTPS. See
 		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
-			/*
+			/**
 			 * Make sure web server variables exist in case WP is
 			 * being used from the command line.
 			 */
 			if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
 				if ( ! self::is_https() ) {
-					wp_redirect( 'https://'.$_SERVER['HTTP_HOST'].
-						$_SERVER['REQUEST_URI'], 301 );
+					wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 301 );
 					exit();
 				}
 			}
 		}
 
-		/*
+		/**
 		 * Make sure URLs from the upload directory - like images in
 		 * the Media Library - use the correct protocol. Adjusts the
 		 * 'url' and 'baseurl' array keys to match the current protocol
@@ -131,7 +130,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return self::update_prot( $url );
 		}
 
-		/*
+		/**
 		 * Extend the WordPress is_ssl() function by also checking for
 		 * proxy / load-balancing 'HTTP_X_FORWARDED_PROTO' and
 		 * 'HTTP_X_FORWARDED_SSL' web server variables.
@@ -181,7 +180,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			if ( strpos( $url, '/' ) === 0 ) {	// skip relative urls
 				return $url;
 			}
-			$prot_slash = self::get_prot().'://';
+			$prot_slash = self::get_prot() . '://';
 			if ( strpos( $url, $prot_slash ) === 0 ) {	// skip correct urls
 				return $url;
 			}
