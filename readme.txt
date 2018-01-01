@@ -83,7 +83,7 @@ Your web server must be configured with an SSL certificate and able to handle HT
 <h3>Repositories</h3>
 
 * [GitHub](https://jsmoriss.github.io/jsm-force-ssl/)
-* [WordPress.org](https://wordpress.org/plugins/jsm-force-ssl/developers/)
+* [WordPress.org](https://plugins.trac.wordpress.org/browser/jsm-force-ssl/)
 
 <h3>Version Numbering</h3>
 
