@@ -189,4 +189,3 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 	JSM_Force_SSL::get_instance();
 }
-
