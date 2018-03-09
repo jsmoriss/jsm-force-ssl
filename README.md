@@ -1,4 +1,4 @@
-<h1>JSM&#039;s Force SSL / HTTPS</h1><h3>Simple, Fast and Effective</h3>
+<h1>JSM&#039;s Force SSL / HTTPS -- Simple, Fast and Effective</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force SSL / HTTPS</td></tr>
