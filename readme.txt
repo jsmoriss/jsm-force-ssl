@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.5
-Stable Tag: 1.2.0
+Stable Tag: 1.2.1
 
 Simple, fast and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
 
@@ -96,6 +96,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.2.1 (2018/05/12)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Maintenance release.
+
 **Version 1.2.0 (2017/09/22)**
 
 * *New Features*
@@ -110,7 +121,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.2.0 =
+= 1.2.1 =
 
-(2017/09/22) Added checks to leave relative urls unchanged. Added a filter for the WordPress plugins_url() function. Refactored several class methods.
+(2018/05/12) Maintenance release.
 

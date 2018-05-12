@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force SSL / HTTPS</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Simple, fast and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.2.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.2.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.9.5</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
