@@ -125,12 +125,38 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return $param;
 		}
 
+		public static function update_url( $url ) {
+			if ( strpos( $url, '/' ) === 0 ) {	// skip relative urls
+				return $url;
+			}
+			$prot_slash = self::get_prot() . '://';
+			if ( strpos( $url, $prot_slash ) === 0 ) {	// skip correct urls
+				return $url;
+			}
+			return preg_replace( '/^([a-z]+:\/\/)/', $prot_slash, $url );
+		}
+
+		public static function get_prot( $url = '' ) {
+			if ( ! empty( $url ) ) {
+				return self::is_https( $url ) ? 'https' : 'http';
+			} elseif ( self::is_https() ) {
+				return 'https';
+			} elseif ( is_admin() )  {
+				if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ) {
+					return 'https';
+				}
+			} elseif ( defined( 'FORCE_SSL' ) && FORCE_SSL ) {
+				return 'https';
+			}
+			return 'http';
+		}
+
 		/**
 		 * Extend the WordPress is_ssl() function by also checking for
 		 * proxy / load-balancing 'HTTP_X_FORWARDED_PROTO' and
 		 * 'HTTP_X_FORWARDED_SSL' web server variables.
 		 */
-		private static function is_https( $url = '' ) {
+		public static function is_https( $url = '' ) {
 			static $cache = array();
 			if ( isset( $cache[$url] ) ) {
 				return $cache[$url];
@@ -154,32 +180,6 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 				}
 			}
 			return $cache[$url] = false;
-		}
-
-		private static function get_prot( $url = '' ) {
-			if ( ! empty( $url ) ) {
-				return self::is_https( $url ) ? 'https' : 'http';
-			} elseif ( self::is_https() ) {
-				return 'https';
-			} elseif ( is_admin() )  {
-				if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ) {
-					return 'https';
-				}
-			} elseif ( defined( 'FORCE_SSL' ) && FORCE_SSL ) {
-				return 'https';
-			}
-			return 'http';
-		}
-
-		private static function update_url( $url ) {
-			if ( strpos( $url, '/' ) === 0 ) {	// skip relative urls
-				return $url;
-			}
-			$prot_slash = self::get_prot() . '://';
-			if ( strpos( $url, $prot_slash ) === 0 ) {	// skip correct urls
-				return $url;
-			}
-			return preg_replace( '/^([a-z]+:\/\/)/', $prot_slash, $url );
 		}
 	}
 
