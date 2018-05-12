@@ -79,7 +79,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * Adjust the URL returned by the WordPress
 			 * plugins_url() function.
 			 */
-			add_filter( 'plugins_url', array( __CLASS__, 'plugins_url' ), 1000, 1 );
+			add_filter( 'plugins_url', array( __CLASS__, 'update_url' ), 1000, 1 );
 		}
 
 		public static function &get_instance() {
@@ -120,13 +120,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		public static function upload_dir_urls( $param ) {
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
-				$param[$key] = self::update_prot( $param[$key] );
+				$param[$key] = self::update_url( $param[$key] );
 			}
 			return $param;
-		}
-
-		public static function plugins_url( $url ) {
-			return self::update_prot( $url );
 		}
 
 		/**
@@ -175,7 +171,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return 'http';
 		}
 
-		private static function update_prot( $url = '' ) {
+		private static function update_url( $url ) {
 			if ( strpos( $url, '/' ) === 0 ) {	// skip relative urls
 				return $url;
 			}
