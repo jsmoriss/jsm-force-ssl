@@ -66,16 +66,6 @@ Your web server must be configured with an SSL certificate and able to handle HT
 
 == Frequently Asked Questions ==
 
-<h3 class="top">Frequently Asked Questions</h3>
-
-* None
-
-== Other Notes ==
-
-<h3 class="top">Additional Documentation</h3>
-
-* None
-
 == Screenshots ==
 
 == Changelog ==
