@@ -89,23 +89,23 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 **Version 1.2.1 (2018/05/12)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
-	* None
+	* None.
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
 	* Maintenance release.
 
 **Version 1.2.0 (2017/09/22)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
 	* Added checks to leave relative urls unchanged.
 	* Added a filter for the WordPress plugins_url() function.
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
 	* Refactored several class methods that check and update url strings.
 
