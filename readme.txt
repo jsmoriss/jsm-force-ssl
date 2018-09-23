@@ -97,18 +97,6 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Maintenance release.
 
-**Version 1.2.0 (2017/09/22)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added checks to leave relative urls unchanged.
-	* Added a filter for the WordPress plugins_url() function.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* Refactored several class methods that check and update url strings.
-
 == Upgrade Notice ==
 
 = 1.2.1 =
