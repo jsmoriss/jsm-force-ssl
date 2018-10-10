@@ -33,7 +33,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force SSL / HTTPS</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Simple, fast and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.2.1</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.0.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.9.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
@@ -43,7 +43,7 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, fast and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS</strong> &mdash; including the WordPress upload folder and plugin url paths. Simply activate the plugin and you're done. ;-)</p>
+<p><strong>A simple, fast and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS</strong> &mdash; including the WordPress post object content, upload folder, and plugin url paths. Simply activate the plugin and you're done. ;-)</p>
 
 <p><strong>This plugin is significantly different than most other plugins of its type (in a good way)</strong> &mdash; other plugins generally create an output filter using <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search / replace URLs within the webpage document. Using an output filter is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which is considered best practive when moving from HTTP to HTTPS</a>).</p>
 
@@ -55,7 +55,7 @@
 <li>FORCE_SSL_LOGIN</li>
 </ul>
 
-<p>The plugin also hooks the WordPress 'upload_dir' and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.</p>
+<p>The plugin also hooks the WordPress 'the_content', 'upload_dir', and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.</p>
 
 <p>The plugin checks and honors the following proxy / load-balancing web server variables:</p>
 
