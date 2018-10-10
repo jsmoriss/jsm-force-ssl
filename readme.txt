@@ -11,13 +11,13 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.8
-Stable Tag: 1.2.1
+Stable Tag: 2.0.0
 
 Simple, fast and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
 
 == Description ==
 
-**A simple, fast and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS** &mdash; including the WordPress upload folder and plugin url paths. Simply activate the plugin and you're done. ;-)
+**A simple, fast and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS** &mdash; including the WordPress post object content, upload folder, and plugin url paths. Simply activate the plugin and you're done. ;-)
 
 **This plugin is significantly different than most other plugins of its type (in a good way)** &mdash; other plugins generally create an output filter using [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search / replace URLs within the webpage document. Using an output filter is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects ([which is considered best practive when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
@@ -27,7 +27,7 @@ The plugin defines the following constants (if not already defined), then makes 
 * FORCE_SSL_ADMIN
 * FORCE_SSL_LOGIN
 
-The plugin also hooks the WordPress 'upload_dir' and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.
+The plugin also hooks the WordPress 'the_content', 'upload_dir', and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.
 
 The plugin checks and honors the following proxy / load-balancing web server variables:
 
@@ -86,20 +86,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.2.1 (2018/05/12)**
+**Version 2.0.0 (2018/10/10)**
 
 * *New Features*
-	* None.
+	* Added a hook for the WordPress 'the_content' filter to change pre-existing "upload folder" HTTP URLs in post object content.
 * *Improvements*
 	* None.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
-	* Maintenance release.
+	* None.
 
 == Upgrade Notice ==
 
-= 1.2.1 =
+= 2.0.0 =
 
-(2018/05/12) Maintenance release.
+(2018/10/10) Added a hook for the WordPress 'the_content' filter to change pre-existing "upload folder" HTTP URLs in post object content.
 
