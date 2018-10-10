@@ -13,7 +13,7 @@
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 4.9.8
- * Version: 1.2.1
+ * Version: 2.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -80,6 +80,11 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * plugins_url() function.
 			 */
 			add_filter( 'plugins_url', array( __CLASS__, 'update_url' ), 1000, 1 );
+
+			/**
+			 * Check the content for http images.
+			 */
+			add_filter( 'the_content', array( __CLASS__, 'filter_content' ), 1000, 1 );
 		}
 
 		public static function &get_instance() {
@@ -92,6 +97,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		}
 
 		public static function load_textdomain() {
+
 			load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 		}
 
@@ -102,13 +108,17 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
+
 			/**
 			 * Make sure web server variables exist in case WP is
 			 * being used from the command line.
 			 */
 			if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
+
 				if ( ! self::is_https() ) {
+
 					wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 301 );
+
 					exit();
 				}
 			}
@@ -121,35 +131,70 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * being used (HTTP or HTTPS).
 		 */
 		public static function upload_dir_urls( $param ) {
+
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
 				$param[$key] = self::update_url( $param[$key] );
 			}
+
 			return $param;
 		}
 
 		public static function update_url( $url ) {
-			if ( strpos( $url, '/' ) === 0 ) {	// skip relative urls
+
+			if ( strpos( $url, '/' ) === 0 ) {		// Skip relative URLs.
 				return $url;
 			}
+
 			$prot_slash = self::get_prot() . '://';
-			if ( strpos( $url, $prot_slash ) === 0 ) {	// skip correct urls
+
+			if ( strpos( $url, $prot_slash ) === 0 ) {	// Skip correct URLs.
 				return $url;
 			}
+
 			return preg_replace( '/^([a-z]+:\/\/)/', $prot_slash, $url );
 		}
 
-		public static function get_prot( $url = '' ) {
+		public static function filter_content( $content ) {
+
+			if ( strpos( $content, 'http:' ) !== false ) {		// Optimize.
+
+				$uploads = wp_get_upload_dir();			// Should return https URLs. 
+
+				if ( ! empty( $uploads['baseurl'] ) ) {		// Just in case.
+
+					$http_base = set_url_scheme( $uploads['baseurl'], 'http' );
+
+					$https_base = self::update_url( $uploads['baseurl'] );
+
+					if ( $http_base !== $https_base ) {	// Just in case.
+						$content = str_replace( $http_base, $https_base, $content );
+					}
+				}
+			}
+
+			return $content;
+		}
+
+		private static function get_prot( $url = '' ) {
+
 			if ( ! empty( $url ) ) {
+
 				return self::is_https( $url ) ? 'https' : 'http';
+
 			} elseif ( self::is_https() ) {
+
 				return 'https';
+
 			} elseif ( is_admin() )  {
+
 				if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ) {
 					return 'https';
 				}
+
 			} elseif ( defined( 'FORCE_SSL' ) && FORCE_SSL ) {
 				return 'https';
 			}
+
 			return 'http';
 		}
 
@@ -158,29 +203,44 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * proxy / load-balancing 'HTTP_X_FORWARDED_PROTO' and
 		 * 'HTTP_X_FORWARDED_SSL' web server variables.
 		 */
-		public static function is_https( $url = '' ) {
+		private static function is_https( $url = '' ) {
+
 			static $cache = array();
+
 			if ( isset( $cache[$url] ) ) {
 				return $cache[$url];
 			}
+
 			if ( ! empty( $url ) ) {
+
 				if ( strpos( $url, '://' ) && 
+
 					parse_url( $url, PHP_URL_SCHEME ) === 'https' ) {
+
 					return $cache[$url] = true;
+
 				} else {
 					return $cache[$url] = false;
 				}
+
 			} else {
+
 				if ( is_ssl() ) {
+
 					return $cache[$url] = true;
+
 				} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 
 					strtolower( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) === 'https' ) {
+
 					return $cache[$url] = true;
+
 				} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 
 					strtolower( $_SERVER['HTTP_X_FORWARDED_SSL'] ) === 'on' ) {
+
 					return $cache[$url] = true;
 				}
 			}
+
 			return $cache[$url] = false;
 		}
 	}
