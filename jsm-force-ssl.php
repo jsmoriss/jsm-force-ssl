@@ -12,7 +12,7 @@
  * Description: Safe, amazingly fast, simple and effective - force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
- * Tested Up To: 4.9.8
+ * Tested Up To: 5.0
  * Version: 2.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
