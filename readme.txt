@@ -10,7 +10,7 @@ Tags: redirect, force, ssl, https, upload, force_ssl, force_ssl_admin, force_ssl
 Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
-Tested Up To: 4.9.8
+Tested Up To: 5.0
 Stable Tag: 2.0.0
 
 Simple, fast and effective &mdash; force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
