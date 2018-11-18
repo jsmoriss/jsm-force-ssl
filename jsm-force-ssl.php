@@ -156,7 +156,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public static function filter_content( $content ) {
 
-			if ( strpos( $content, 'http:' ) !== false ) {		// Optimize.
+			if ( false !== strpos( $content, 'http:' ) ) {		// Optimize.
 
 				$uploads = wp_get_upload_dir();			// Should return https URLs. 
 
