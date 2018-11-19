@@ -13,7 +13,7 @@ Requires At Least: 3.8
 Tested Up To: 5.0
 Stable Tag: 2.0.0
 
-No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, along with 301 redirects for good SEO.
+No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed and reliability, along with 301 redirects for good SEO.
 
 == Description ==
 
