@@ -1,4 +1,4 @@
-=== JSM's Force SSL / HTTPS - Simple, Fast and Effective ===
+=== JSM's Force SSL / HTTPS - Simple, Fast, Effective, Good for SEO ===
 Plugin Name: JSM's Force SSL / HTTPS
 Plugin Slug: jsm-force-ssl
 Text Domain: jsm-force-ssl
@@ -13,13 +13,13 @@ Requires At Least: 3.8
 Tested Up To: 5.0
 Stable Tag: 2.0.0
 
-Simple, fast and effective - no setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability.
+No setup required - force HTTP to HTTPS using WordPress filters for speed and reliability, along with 301 redirects for good SEO.
 
 == Description ==
 
 **A simple, fast and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS** &mdash; including the WordPress post object content, upload folder, and plugin url paths. Simply activate the plugin and you're done. ;-)
 
-**This plugin is significantly different than most other plugins of its type (in a good way)** &mdash; other plugins generally create an output filter using [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search / replace URLs within the webpage document. Using an output filter is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects ([which is considered best SEO practive when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+**This plugin is significantly different than most other plugins of its type** (*in a good way*) &mdash; other plugins generally use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search / replace URLs within the webpage document. Using an output filter is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects ([which is considered best SEO practive when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
 The plugin defines the following constants (if not already defined), then makes sure that all HTTP requests are rewritten / redirected to their HTTPS equivalent:
 
