@@ -84,7 +84,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			/**
 			 * Check the content for http images.
 			 */
-			add_filter( 'the_content', array( __CLASS__, 'filter_content' ), 1000, 1 );
+			add_filter( 'the_content', array( __CLASS__, 'filter_text' ), 1000, 1 );
+			add_filter( 'widget_text', array( __CLASS__, 'filter_text' ), 1000, 1 );
 		}
 
 		public static function &get_instance() {
@@ -113,11 +114,11 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * Make sure web server variables exist in case WP is
 			 * being used from the command line.
 			 */
-			if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
+			if ( isset( $_SERVER[ 'HTTP_HOST' ] ) && isset( $_SERVER[ 'REQUEST_URI' ] ) ) {
 
 				if ( ! self::is_https() ) {
 
-					wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 301 );
+					wp_redirect( 'https://' . $_SERVER[ 'HTTP_HOST' ] . $_SERVER[ 'REQUEST_URI' ], 301 );
 
 					exit();
 				}
@@ -133,7 +134,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		public static function upload_dir_urls( $param ) {
 
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
-				$param[$key] = self::update_url( $param[$key] );
+				$param[ $key ] = self::update_url( $param[ $key ] );
 			}
 
 			return $param;
@@ -154,21 +155,15 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return preg_replace( '/^([a-z]+:\/\/)/', $prot_slash, $url );
 		}
 
-		public static function filter_content( $content ) {
+		public static function filter_text( $content ) {
 
 			if ( false !== strpos( $content, 'http:' ) ) {		// Optimize.
 
-				$uploads = wp_get_upload_dir();			// Should return https URLs. 
+				$http_home_url  = get_home_url( null, '/', 'http' );
+				$https_home_url = self::update_url( $http_home_url );
 
-				if ( ! empty( $uploads['baseurl'] ) ) {		// Just in case.
-
-					$http_base = set_url_scheme( $uploads['baseurl'], 'http' );
-
-					$https_base = self::update_url( $uploads['baseurl'] );
-
-					if ( $http_base !== $https_base ) {	// Just in case.
-						$content = str_replace( $http_base, $https_base, $content );
-					}
+				if ( $http_home_url !== $https_home_url ) {	// Just in case.
+					$content = str_replace( $http_home_url, $https_home_url, $content );
 				}
 			}
 
@@ -207,8 +202,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 			static $cache = array();
 
-			if ( isset( $cache[$url] ) ) {
-				return $cache[$url];
+			if ( isset( $cache[ $url ] ) ) {
+				return $cache[ $url ];
 			}
 
 			if ( ! empty( $url ) ) {
@@ -217,31 +212,31 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 					parse_url( $url, PHP_URL_SCHEME ) === 'https' ) {
 
-					return $cache[$url] = true;
+					return $cache[ $url ] = true;
 
 				} else {
-					return $cache[$url] = false;
+					return $cache[ $url ] = false;
 				}
 
 			} else {
 
 				if ( is_ssl() ) {
 
-					return $cache[$url] = true;
+					return $cache[ $url ] = true;
 
-				} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 
-					strtolower( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) === 'https' ) {
+				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
+					strtolower( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) === 'https' ) {
 
-					return $cache[$url] = true;
+					return $cache[ $url ] = true;
 
-				} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 
-					strtolower( $_SERVER['HTTP_X_FORWARDED_SSL'] ) === 'on' ) {
+				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) && 
+					strtolower( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) === 'on' ) {
 
-					return $cache[$url] = true;
+					return $cache[ $url ] = true;
 				}
 			}
 
-			return $cache[$url] = false;
+			return $cache[ $url ] = false;
 		}
 	}
 
