@@ -157,9 +157,10 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public static function filter_text( $content ) {
 
-			if ( false !== strpos( $content, 'http:' ) ) {		// Optimize.
+			$http_home_url  = get_home_url( null, '/', 'http' );
 
-				$http_home_url  = get_home_url( null, '/', 'http' );
+			if ( false !== strpos( $content, $http_home_url ) ) {	// Optimize.
+
 				$https_home_url = self::update_url( $http_home_url );
 
 				if ( $http_home_url !== $https_home_url ) {	// Just in case.
