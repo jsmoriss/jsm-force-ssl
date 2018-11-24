@@ -8,12 +8,12 @@
  * Author: JS Morisset
  * Author URI: https://surniaulula.com/
  * License: GPLv3
- * License URI: http://www.gnu.org/licenses/gpl.txt
+ * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Safe, amazingly fast, simple and effective - force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 5.0
- * Version: 2.0.0
+ * Version: 2.1.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
