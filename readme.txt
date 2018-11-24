@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 5.0
-Stable Tag: 2.0.0
+Stable Tag: 2.1.0
 
 No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed and reliability, along with 301 redirects for good SEO.
 
@@ -89,9 +89,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 **Version 2.1.0 (2018/11/24)**
 
 * *New Features*
-	* Added a hook for the WordPress 'widget_text' filter.
-* *Improvements*
 	* None.
+* *Improvements*
+	* Added a hook for the WordPress 'widget_text' filter.
+	* Updated 'the_content' and 'widget_text' filters to replace all "home" HTTP URLs, not just the "upload folder" URLs.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
@@ -112,5 +113,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.1.0 =
 
-(2018/11/24) Added a hook for the WordPress 'widget_text' filter.
+(2018/11/24) Added a hook for the WordPress 'widget_text' filter. Updated 'the_content' and 'widget_text' filters to replace all "home" HTTP URLs.
 
