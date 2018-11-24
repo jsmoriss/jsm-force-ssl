@@ -27,7 +27,7 @@ The plugin defines the following constants (if not already defined), then makes 
 * FORCE_SSL_ADMIN
 * FORCE_SSL_LOGIN
 
-The plugin also hooks the WordPress 'the_content', 'upload_dir', and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.
+The plugin also hooks the WordPress 'the_content', 'widget_text', 'upload_dir', and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.
 
 The plugin checks and honors the following proxy / load-balancing web server variables:
 
@@ -86,6 +86,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.1.0 (2018/11/24)**
+
+* *New Features*
+	* Added a hook for the WordPress 'widget_text' filter.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* None.
+
 **Version 2.0.0 (2018/10/10)**
 
 * *New Features*
@@ -99,7 +110,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.0.0 =
+= 2.1.0 =
 
-(2018/10/10) Added a hook for the WordPress 'the_content' filter to change pre-existing "upload folder" HTTP URLs in post object content.
+(2018/11/24) Added a hook for the WordPress 'widget_text' filter.
 

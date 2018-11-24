@@ -25,7 +25,7 @@
 <li>FORCE_SSL_LOGIN</li>
 </ul>
 
-<p>The plugin also hooks the WordPress 'the_content', 'upload_dir', and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.</p>
+<p>The plugin also hooks the WordPress 'the_content', 'widget_text', 'upload_dir', and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.</p>
 
 <p>The plugin checks and honors the following proxy / load-balancing web server variables:</p>
 
