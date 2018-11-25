@@ -86,7 +86,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0 (2018/11/24)**
+**Version 2.1.0 (2018/11/25)**
 
 * *New Features*
 	* None.
@@ -113,5 +113,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.1.0 =
 
-(2018/11/24) Added a hook for the WordPress 'widget_text' filter. Updated 'the_content' and 'widget_text' filters to replace all "home" HTTP URLs.
+(2018/11/25) Added a hook for the WordPress 'widget_text' filter. Updated 'the_content' and 'widget_text' filters to replace all "home" HTTP URLs.
 
