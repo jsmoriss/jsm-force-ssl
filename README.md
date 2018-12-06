@@ -15,11 +15,11 @@
 
 <p><strong>A simple, fast, and effective way to make sure that all HTTP URLs get rewritten and redirected to SSL / HTTPS.</strong></p>
 
-<p><strong>Simply activate the plugin and you're done</strong> &mdash; there are no plugin settings to adjust or any changes made to your WordPress settings.</p>
+<p><strong>Simply activate the plugin and you're done</strong> &mdash; there are no plugin settings to adjust or any changes made to your WordPress configuration.</p>
 
-<p><strong>The plugin is significantly different than most other plugins of this type</strong> (<em>in a good way</em>) &mdash; other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. <em>Using PHP's output filter is error prone and much slower than hooking native WordPress filters</em> (as this plugin does) in combination with permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">considered best for SEO when moving from HTTP to HTTPS</a>).</p>
+<p><strong>This plugin is significantly different than most plugins of this type</strong> (<em>in a good way</em>) &mdash; other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. <em>Using PHP's output filter is error prone and much slower</em> than hooking native WordPress filters in combination with permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
-<p><strong>The plugin also checks for and honors the following proxy / load-balancing web server variables:</strong></p>
+<p><strong>The plugin also checks for and honors proxy / load-balancing web server variables:</strong></p>
 
 <ul>
 <li>HTTP_X_FORWARDED_PROTO</li>
