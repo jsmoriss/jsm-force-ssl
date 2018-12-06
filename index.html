@@ -43,28 +43,18 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, fast and effective way to make sure that all HTTP URLs get rewritten / redirected to HTTPS</strong> &mdash; including the WordPress post object content, upload folder, and plugin url paths. Simply activate the plugin and you're done. ;-)</p>
+<p><strong>A simple, fast, and effective way to make sure that all HTTP URLs get rewritten and redirected to SSL / HTTPS.</strong></p>
 
-<p><strong>This plugin is significantly different than most other plugins of its type</strong> (<em>in a good way</em>) &mdash; other plugins generally use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search / replace URLs within the webpage document. Using an output filter is much slower (and error prone) than hooking WordPress filters and using permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which is considered best SEO practice when moving from HTTP to HTTPS</a>).</p>
+<p><strong>Simply activate the plugin and you're done</strong> &mdash; there are no plugin settings to adjust or any changes made to your WordPress settings.</p>
 
-<p>The plugin defines the following constants (if not already defined), then makes sure that all HTTP requests are rewritten / redirected to their HTTPS equivalent:</p>
+<p><strong>The plugin is significantly different than most other plugins of this type</strong> (<em>in a good way</em>) &mdash; other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. <em>Using PHP's output filter is error prone and much slower than hooking native WordPress filters</em> (as this plugin does) in combination with permanent (301) redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
-<ul>
-<li>FORCE_SSL</li>
-<li>FORCE_SSL_ADMIN</li>
-<li>FORCE_SSL_LOGIN</li>
-</ul>
-
-<p>The plugin also hooks the WordPress 'the_content', 'widget_text', 'upload_dir', and 'plugins_url' filters to make sure that all URLs match the appropriate protocol.</p>
-
-<p>The plugin checks and honors the following proxy / load-balancing web server variables:</p>
+<p><strong>The plugin also checks for and honors the following proxy / load-balancing web server variables:</strong></p>
 
 <ul>
 <li>HTTP_X_FORWARDED_PROTO</li>
 <li>HTTP_X_FORWARDED_SSL</li>
 </ul>
-
-<p>There are no plugin settings &mdash; simply <em>install</em> and <em>activate</em> the plugin.</p>
 
 <p><strong>Requirements</strong></p>
 
