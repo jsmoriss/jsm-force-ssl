@@ -13,7 +13,7 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, fast and effective way to make sure that all HTTP URLs get rewritten and redirected to SSL / HTTPS.</strong></p>
+<h4>A simple, fast and effective way to make sure that HTTP URLs get rewritten and redirected to SSL / HTTPS.</h4>
 
 <p><strong>Simply activate the plugin and you're done</strong> &mdash; there are no plugin settings to adjust and no changes made to your WordPress configuration.</p>
 
@@ -32,9 +32,10 @@
 
 <h4>Improve your social and search ranking?</h4>
 
-<p>The <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a> makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!</p>
-
-<p>The <a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup add-on</a> for WPSSO Core offers Schema JSON-LD / Google Rich Card markup for Articles, Events, Local Business, Products, Recipes, Reviews and many more.</p>
+<ul>
+<li><p>The <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a> makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!</p></li>
+<li><p>The <a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup add-on</a> for WPSSO Core offers Schema JSON-LD / Google Rich Card markup for Articles, Events, Local Business, Products, Recipes, Reviews and many more.</p></li>
+</ul>
 
 
 <h2>Installation</h2>

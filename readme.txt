@@ -17,7 +17,7 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed 
 
 == Description ==
 
-**A simple, fast and effective way to make sure that all HTTP URLs get rewritten and redirected to SSL / HTTPS.**
+= A simple, fast and effective way to make sure that HTTP URLs get rewritten and redirected to SSL / HTTPS. =
 
 **Simply activate the plugin and you're done** &mdash; there are no plugin settings to adjust and no changes made to your WordPress configuration.
 
@@ -34,9 +34,9 @@ Your web server must be configured with an SSL certificate and able to handle HT
 
 = Improve your social and search ranking? =
 
-The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!
+* The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!
 
-The [WPSSO Schema JSON-LD Markup add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/) for WPSSO Core offers Schema JSON-LD / Google Rich Card markup for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
+* The [WPSSO Schema JSON-LD Markup add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/) for WPSSO Core offers Schema JSON-LD / Google Rich Card markup for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
 
 == Installation ==
 
