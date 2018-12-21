@@ -17,11 +17,11 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed 
 
 == Description ==
 
-**A simple, fast and effective way to make sure that HTTP URLs get rewritten and redirected to SSL / HTTPS.**
+**A simple, fast and effective way to make sure that all your HTTP URLs get rewritten and redirected to SSL / HTTPS.**
 
 **Simply activate the plugin and you're done:**
 
-There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin.
+There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.
 
 **Significantly different than most other plugins of this type** (*in a good way*):
 
