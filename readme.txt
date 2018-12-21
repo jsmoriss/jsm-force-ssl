@@ -21,13 +21,13 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed 
 
 **Simply activate the plugin and you're done:**
 
-There are no plugin settings to adjust and no changes made to your WordPress configuration.
+There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin.
 
-**This plugin is significantly different than most plugins of this type** (*in a good way*):
+**Significantly different than most other plugins of this type** (*in a good way*):
 
 Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document. *Using PHP's output filter is error prone and much slower* than hooking native WordPress filters in combination with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
-**Also checks for and honors proxy / load-balancing variables:**
+**Checks for and honors proxy / load-balancing variables:**
 
 * HTTP_X_FORWARDED_PROTO
 * HTTP_X_FORWARDED_SSL
@@ -36,7 +36,7 @@ Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/functio
 
 Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
 
-= Easily improve your social and search ranking! =
+= Also improve your social and search ranking! =
 
 * The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!
 

@@ -17,13 +17,13 @@
 
 <p><strong>Simply activate the plugin and you're done:</strong></p>
 
-<p>There are no plugin settings to adjust and no changes made to your WordPress configuration.</p>
+<p>There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin.</p>
 
-<p><strong>This plugin is significantly different than most plugins of this type</strong> (<em>in a good way</em>):</p>
+<p><strong>Significantly different than most other plugins of this type</strong> (<em>in a good way</em>):</p>
 
 <p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. <em>Using PHP's output filter is error prone and much slower</em> than hooking native WordPress filters in combination with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
-<p><strong>Also checks for and honors proxy / load-balancing variables:</strong></p>
+<p><strong>Checks for and honors proxy / load-balancing variables:</strong></p>
 
 <ul>
 <li>HTTP_X_FORWARDED_PROTO</li>
@@ -34,7 +34,7 @@
 
 <p>Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)</p>
 
-<h4>Easily improve your social and search ranking!</h4>
+<h4>Also improve your social and search ranking!</h4>
 
 <ul>
 <li><p>The <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a> makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!</p></li>
