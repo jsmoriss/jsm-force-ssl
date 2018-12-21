@@ -17,22 +17,26 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed 
 
 == Description ==
 
-= A simple, fast and effective way to make sure that HTTP URLs get rewritten and redirected to SSL / HTTPS. =
+**A simple, fast and effective way to make sure that HTTP URLs get rewritten and redirected to SSL / HTTPS.**
 
-**Simply activate the plugin and you're done** &mdash; there are no plugin settings to adjust and no changes made to your WordPress configuration.
+**Simply activate the plugin and you're done:**
 
-**This plugin is significantly different than most plugins of this type** (*in a good way*) &mdash; other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document. *Using PHP's output filter is error prone and much slower* than hooking native WordPress filters in combination with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+There are no plugin settings to adjust and no changes made to your WordPress configuration.
 
-**The plugin also checks for and honors proxy / load-balancing web server variables:**
+**This plugin is significantly different than most plugins of this type** (*in a good way*):
+
+Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document. *Using PHP's output filter is error prone and much slower* than hooking native WordPress filters in combination with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+
+**Also checks for and honors proxy / load-balancing variables:**
 
 * HTTP_X_FORWARDED_PROTO
 * HTTP_X_FORWARDED_SSL
 
-**Requirements**
+**Requirements:**
 
 Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
 
-= Improve your social and search ranking? =
+= Easily improve your social and search ranking! =
 
 * The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!
 
