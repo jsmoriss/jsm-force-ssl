@@ -17,11 +17,11 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed 
 
 == Description ==
 
-**A simple, fast, and effective way to make sure that all HTTP URLs get rewritten and redirected to SSL / HTTPS.**
+**A simple, fast and effective way to make sure that all HTTP URLs get rewritten and redirected to SSL / HTTPS.**
 
-**Simply activate the plugin and you're done** &mdash; there are no plugin settings to adjust or any changes made to your WordPress configuration.
+**Simply activate the plugin and you're done** &mdash; there are no plugin settings to adjust and no changes made to your WordPress configuration.
 
-**This plugin is significantly different than most plugins of this type** (*in a good way*) &mdash; other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document. *Using PHP's output filter is error prone and much slower* than hooking native WordPress filters in combination with permanent (301) redirects ([considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+**This plugin is significantly different than most plugins of this type** (*in a good way*) &mdash; other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document. *Using PHP's output filter is error prone and much slower* than hooking native WordPress filters in combination with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
 **The plugin also checks for and honors proxy / load-balancing web server variables:**
 
@@ -31,6 +31,12 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed 
 **Requirements**
 
 Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
+
+= Improve your social and search ranking? =
+
+The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites - no matter how it's crawled, shared, re-shared, posted, or embedded!
+
+The [WPSSO Schema JSON-LD Markup add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/) for WPSSO Core offers Schema JSON-LD / Google Rich Card markup for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
 
 == Installation ==
 
