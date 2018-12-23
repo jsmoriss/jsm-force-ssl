@@ -34,7 +34,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * constants can be pre-defined as false in wp-config.php to turn disable a
  * specific forced SSL feature.
  */
-
 if ( ! defined( 'FORCE_SSL' ) ) {
 	define( 'FORCE_SSL', true );
 }
@@ -65,6 +64,25 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 */
 			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
 				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
+			}
+
+			/**
+			 * If WordPress is hosted behind a reverse proxy that
+			 * provides SSL, but is hosted itself without SSL,
+			 * these options will initially send any requests into
+			 * an infinite redirect loop. To avoid this, you may
+			 * configure WordPress to recognize the
+			 * HTTP_X_FORWARDED_PROTO header (assuming you have
+			 * properly configured the reverse proxy to set that
+			 * header). 
+			 */
+			if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN && is_admin() ) {
+
+				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
+					strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
+
+					$_SERVER[ 'HTTPS' ] = 'on';
+				}
 			}
 
 			/**
@@ -225,8 +243,15 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 					return $cache[ $url ] = true;
 
+				/**
+				 * In some setups, HTTP_X_FORWARDED_PROTO might
+				 * contain a comma-separated list (ie.
+				 * "http,https"), so use strpos() to check for
+				 * "https" within a possible comma-separated
+				 * list.
+				 */
 				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
-					strtolower( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) === 'https' ) {
+					strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
 
 					return $cache[ $url ] = true;
 
