@@ -10,7 +10,7 @@
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Safe, amazingly fast, simple and effective - force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
- * Requires PHP: 5.4
+ * Requires PHP: 5.5
  * Requires At Least: 3.8
  * Tested Up To: 5.0
  * Version: 2.2.0
