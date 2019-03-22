@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
 Tags: redirect, force, ssl, https, upload, force_ssl, force_ssl_admin, force_ssl_login, upload_dir, proxy, load balancing, permanent
 Contributors: jsmoriss
-Requires PHP: 5.5
+Requires PHP: 5.6
 Requires At Least: 3.8
 Tested Up To: 5.1
 Stable Tag: 2.2.0
