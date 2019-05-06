@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 3.8
  * Tested Up To: 5.2
- * Version: 2.2.0
+ * Version: 3.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -54,7 +54,15 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public function __construct() {
 
-			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
+			/**
+			 * If WordPress is hosted behind a reverse proxy that provides
+			 * SSL, but is hosted itself without SSL, these options will
+			 * initially send any requests into an infinite redirect loop.
+			 * To avoid this, you may configure WordPress to recognize the
+			 * HTTP_X_FORWARDED_PROTO header (assuming you have properly
+			 * configured the reverse proxy to set that header). 
+			 */
+			self::maybe_set_server_https_on();
 
 			/**
 			 * WordPress should redirect back-end / admin URLs just
@@ -62,12 +70,16 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * 'init' action and check the protocol if FORCE_SSL is
 			 * true.
 			 */
-			if ( defined( 'FORCE_SSL' ) && FORCE_SSL && ! is_admin() ) {
+			if ( defined( 'FORCE_SSL' ) && FORCE_SSL ) {
+
+				add_filter( 'home_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
+
 				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
 			}
 
-			if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN && is_admin() ) {
-				self::maybe_server_https_on();
+			if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ) {
+
+				add_filter( 'site_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
 			}
 
 			/**
@@ -82,13 +94,16 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * Adjust the URL returned by the WordPress
 			 * plugins_url() function.
 			 */
-			add_filter( 'plugins_url', array( __CLASS__, 'update_url' ), 1000, 1 );
+			add_filter( 'plugins_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
 
 			/**
 			 * Check the content for http images.
 			 */
-			add_filter( 'the_content', array( __CLASS__, 'filter_text' ), 1000, 1 );
-			add_filter( 'widget_text', array( __CLASS__, 'filter_text' ), 1000, 1 );
+			add_filter( 'the_content', array( __CLASS__, 'filter_content_text' ), 1000, 1 );
+
+			add_filter( 'widget_text', array( __CLASS__, 'filter_content_text' ), 1000, 1 );
+
+			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 		}
 
 		public static function &get_instance() {
@@ -137,13 +152,13 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		public static function upload_dir_urls( $param ) {
 
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
-				$param[ $key ] = self::update_url( $param[ $key ] );
+				$param[ $key ] = self::update_single_url( $param[ $key ] );
 			}
 
 			return $param;
 		}
 
-		public static function update_url( $url ) {
+		public static function update_single_url( $url ) {
 
 			if ( strpos( $url, '/' ) === 0 ) {		// Skip relative URLs.
 				return $url;
@@ -158,13 +173,13 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return preg_replace( '/^([a-z]+:\/\/)/', $prot_slash, $url );
 		}
 
-		public static function filter_text( $content ) {
+		public static function filter_content_text( $content ) {
 
 			$http_home_url  = get_home_url( null, '/', 'http' );
 
 			if ( false !== strpos( $content, $http_home_url ) ) {	// Optimize.
 
-				$https_home_url = self::update_url( $http_home_url );
+				$https_home_url = self::update_single_url( $http_home_url );
 
 				if ( $http_home_url !== $https_home_url ) {	// Just in case.
 					$content = str_replace( $http_home_url, $https_home_url, $content );
@@ -182,12 +197,14 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * HTTP_X_FORWARDED_PROTO header (assuming you have properly
 		 * configured the reverse proxy to set that header). 
 		 */
-		private static function maybe_server_https_on() {
+		private static function maybe_set_server_https_on() {
 
-			if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
-				strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
+			if ( ! isset( $_SERVER[ 'HTTPS' ] ) || $_SERVER[ 'HTTPS' ] !== 'on' ) {;
+				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
+					strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
 
-				$_SERVER[ 'HTTPS' ] = 'on';
+					$_SERVER[ 'HTTPS' ] = 'on';
+				}
 			}
 		}
 
