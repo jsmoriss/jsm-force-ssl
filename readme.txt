@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 3.8
 Tested Up To: 5.2
-Stable Tag: 2.2.0
+Stable Tag: 3.0.0
 
 No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed and reliability, along with 301 redirects for good SEO.
 
@@ -88,33 +88,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.0 (2018/12/23)**
+**Version 3.0.0 (2019/05/06)**
 
 * *New Features*
-	* None.
-* *Improvements*
-	* Added support for a possible HTTP_X_FORWARDED_PROTO comma-separated list value.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
-**Version 2.1.0 (2018/11/25)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added a hook for the WordPress 'widget_text' filter.
-	* Updated 'the_content' and 'widget_text' filters to replace all "home" HTTP URLs, not just the "upload folder" URLs.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
-**Version 2.0.0 (2018/10/10)**
-
-* *New Features*
-	* Added a hook for the WordPress 'the_content' filter to change pre-existing "upload folder" HTTP URLs in post object content.
+	* Added filter hooks to automatically update the 'home_url' and 'site_url' values.
 * *Improvements*
 	* None.
 * *Bugfixes*
@@ -124,7 +101,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.2.0 =
+= 3.0.0 =
 
-(2018/12/23) Added support for a possible HTTP_X_FORWARDED_PROTO comma-separated list value.
+(2019/05/06) Added filter hooks to automatically update the 'home_url' and 'site_url' values.
 
