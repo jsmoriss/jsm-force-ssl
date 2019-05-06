@@ -70,14 +70,14 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 * 'init' action and check the protocol if FORCE_SSL is
 			 * true.
 			 */
-			if ( defined( 'FORCE_SSL' ) && FORCE_SSL ) {
+			if ( FORCE_SSL ) {
 
 				add_filter( 'home_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
 
 				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
 			}
 
-			if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ) {
+			if ( FORCE_SSL_ADMIN ) {
 
 				add_filter( 'site_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
 			}
@@ -220,11 +220,11 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 			} elseif ( is_admin() )  {
 
-				if ( defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ) {
+				if ( FORCE_SSL_ADMIN ) {
 					return 'https';
 				}
 
-			} elseif ( defined( 'FORCE_SSL' ) && FORCE_SSL ) {
+			} elseif ( FORCE_SSL ) {
 				return 'https';
 			}
 
