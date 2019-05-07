@@ -162,6 +162,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 * update_single_url() may be used to filter a single URL, or
 		 * as a filter for the get_home_url() and get_site_url()
 		 * functions.
+		 *
+		 * $scheme can be null, 'http', 'https', 'login', 'login_post',
+		 * 'admin', or 'relative'.
 		 */
 		public static function update_single_url( $url, $path = '', $scheme = null, $blog_id = null ) {
 
