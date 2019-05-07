@@ -36,7 +36,7 @@ Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/functio
 
 Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
 
-= Also improve your social and search ranking! =
+= Other plugins to improve your social and search ranking! =
 
 * The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites - no matter how URLs are crawled, shared, re-shared, posted, or embedded!
 
