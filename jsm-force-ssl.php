@@ -158,15 +158,15 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return $param;
 		}
 
-		public static function update_single_url( $url ) {
+		public static function update_single_url( $url, $path = '', $scheme = null, $blog_id = null ) {
 
-			if ( strpos( $url, '/' ) === 0 ) {		// Skip relative URLs.
+			if ( 0 === strpos( $url, '/' ) ) {		// Skip relative URLs.
 				return $url;
 			}
 
-			$prot_slash = self::get_prot() . '://';
+			$prot_slash = ( null === $scheme ? self::get_prot() : $scheme ) . '://';
 
-			if ( strpos( $url, $prot_slash ) === 0 ) {	// Skip correct URLs.
+			if ( 0 === strpos( $url, $prot_slash ) ) {	// Skip correct URLs.
 				return $url;
 			}
 
