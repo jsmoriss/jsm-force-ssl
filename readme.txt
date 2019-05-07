@@ -88,6 +88,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.1.0 (2019/05/07)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* Added support for the `$scheme` argument when filtering the 'home_url' and 'site_url' values.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* None.
+
 **Version 3.0.0 (2019/05/06)**
 
 * *New Features*
@@ -100,6 +111,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 
 == Upgrade Notice ==
+
+= 3.1.0 =
+
+(2019/05/07) Added support for the `$scheme` argument when filtering the 'home_url' and 'site_url' values
 
 = 3.0.0 =
 
