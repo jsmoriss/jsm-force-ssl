@@ -72,14 +72,14 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 */
 			if ( FORCE_SSL ) {
 
-				add_filter( 'home_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
+				add_filter( 'home_url', array( __CLASS__, 'update_single_url' ), 1000, 4 );
 
 				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
 			}
 
 			if ( FORCE_SSL_ADMIN ) {
 
-				add_filter( 'site_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
+				add_filter( 'site_url', array( __CLASS__, 'update_single_url' ), 1000, 4 );
 			}
 
 			/**
@@ -158,13 +158,24 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return $param;
 		}
 
+		/**
+		 * update_single_url() may be used to filter a single URL, or
+		 * as a filter for the get_home_url() and get_site_url()
+		 * functions.
+		 */
 		public static function update_single_url( $url, $path = '', $scheme = null, $blog_id = null ) {
 
 			if ( 0 === strpos( $url, '/' ) ) {		// Skip relative URLs.
 				return $url;
 			}
 
-			$prot_slash = ( null === $scheme ? self::get_prot() : $scheme ) . '://';
+			if ( null === $scheme ) {
+				$prot_slash = self::get_prot() . '://';
+			} elseif ( 'http' === $scheme || 'https' === $scheme ) {
+				$prot_slash = $scheme . '://';
+			} else {
+				return $url;
+			}
 
 			if ( 0 === strpos( $url, $prot_slash ) ) {	// Skip correct URLs.
 				return $url;
