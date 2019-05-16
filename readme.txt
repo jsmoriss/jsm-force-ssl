@@ -99,24 +99,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* None.
 
-**Version 3.0.0 (2019/05/06)**
-
-* *New Features*
-	* Added filter hooks to automatically update the 'home_url' and 'site_url' values.
-* *Improvements*
-	* None.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
 == Upgrade Notice ==
 
 = 3.1.0 =
 
 (2019/05/07) Added support for the `$scheme` argument when filtering the 'home_url' and 'site_url' values
-
-= 3.0.0 =
-
-(2019/05/06) Added filter hooks to automatically update the 'home_url' and 'site_url' values.
 
