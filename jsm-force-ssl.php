@@ -189,7 +189,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public static function filter_content_text( $content ) {
 
-			$http_home_url  = get_home_url( null, '/', 'http' );
+			$http_home_url  = get_home_url( null, $path = '/', $scheme = 'http' );
 
 			if ( false !== strpos( $content, $http_home_url ) ) {	// Optimize.
 
