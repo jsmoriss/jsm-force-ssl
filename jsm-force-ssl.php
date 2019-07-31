@@ -121,16 +121,14 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		}
 
 		/**
-		 * Redirect from HTTP to HTTPS if the current webpage URL is
-		 * not HTTPS. A 301 redirect is considered a best practice when
-		 * moving from HTTP to HTTPS. See
-		 * https://en.wikipedia.org/wiki/HTTP_301 for more info.
+		 * Redirect from HTTP to HTTPS if the current webpage URL is not HTTPS.
+		 * A 301 redirect is considered a best practice when moving from HTTP to
+		 * HTTPS. See https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
 
 			/**
-			 * Make sure web server variables exist in case WP is
-			 * being used from the command line.
+			 * Make sure web server variables exist in case WP is being used from the command line.
 			 */
 			if ( isset( $_SERVER[ 'HTTP_HOST' ] ) && isset( $_SERVER[ 'REQUEST_URI' ] ) ) {
 
