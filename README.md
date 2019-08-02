@@ -1,8 +1,8 @@
-<h1>JSM&#039;s Force SSL / HTTPS</h1><h3>Simple, Fast, Effective, Good for SEO</h3>
+<h1>JSM&#039;s Force SSL / HTTPS</h1><h3>Simple, Fast, Effective, Better for SEO</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force SSL / HTTPS</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed and reliability, along with 301 redirects for good SEO.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - force HTTP URLs to HTTPS using WordPress filters, for speed and reliability, along with 301 redirects for better SEO.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.2</td></tr>
@@ -13,15 +13,15 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, fast and effective way to make sure that all your HTTP URLs get rewritten and redirected to SSL / HTTPS.</strong></p>
+<p><strong>A simple, fast, and effective way to make sure URLs get redirected to HTTPS dynamically.</strong></p>
 
 <p><strong>Simply activate the plugin and you're done:</strong></p>
 
 <p>There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.</p>
 
-<p><strong>Significantly different than most other plugins of this type</strong> (<em>in a good way</em>):</p>
+<p><strong>Significantly different than other plugins of this type</strong> (<em>in a good way</em>):</p>
 
-<p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. <em>Using PHP's output filter is error prone and much slower</em> than hooking native WordPress filters in combination with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
+<p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. Using PHP's output filter is error prone and much slower than hooking native WordPress filters in combination with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
 <p><strong>Checks for and honors proxy / load-balancing variables:</strong></p>
 
@@ -34,7 +34,7 @@
 
 <p>Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)</p>
 
-<h4>Other plugins to improve your social and search ranking!</h4>
+<h4>Suggested plugins to improve social and SEO ranking:</h4>
 
 <ul>
 <li><p>The <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a> makes sure your content looks great on all social and search sites - no matter how URLs are crawled, shared, re-shared, posted, or embedded!</p></li>
