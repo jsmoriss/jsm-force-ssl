@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: JSM's Force SSL / HTTPS 3.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-force-ssl\n"
 "POT-Creation-Date: 2019-08-05 09:15-0700\n"
-"PO-Revision-Date: 2019-08-05 09:16-0700\n"
+"PO-Revision-Date: 2019-08-05 09:19-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -34,64 +34,3 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://surniaulula.com/"
 msgstr "https://surniaulula.com/"
-
-#~ msgid "%s Notice"
-#~ msgstr "Avis %s"
-
-#~ msgid "Notice"
-#~ msgstr "Avis"
-
-#~ msgid "The \"%1$s\" hook with priority %2$d in the \"%3$s\" filter has incorrectly sent output to the webpage."
-#~ msgstr "Le crochet de filtre \"%1$s\" avec la priorité %2$d dans le filtre \"%3$s\" a envoyé une valeur à la sortie de page Web incorrectement."
-
-#~ msgid "All WordPress filter hooks must return their text, not send it to the webpage output."
-#~ msgstr "Tous les crochets de filtre WordPress doivent retourner leur texte, pas l'envoyer à la sortie de la page Web."
-
-#~ msgid "Please contact the author of that filter hook and report this issue as a coding error."
-#~ msgstr "SVP contacter l'auteur de ce filtre et signaler ce problème comme une erreur de codage."
-
-#~ msgid "Incorrect webpage output:"
-#~ msgstr "Sortie incorrecte à la page Web:"
-
-#~ msgid "BEGIN OUTPUT"
-#~ msgstr "DÉBUT DE SORTIE"
-
-#~ msgid "END OUTPUT"
-#~ msgstr "FIN DE SORTIE"
-
-#~ msgid "Forever"
-#~ msgstr "Toujours"
-
-#~ msgid "This notice can be dismissed permanently."
-#~ msgstr "Cet avis peut être masqué définitivement."
-
-#~ msgid "This notice can be dismissed for %s."
-#~ msgstr "Cet avis peut être masqué pour %s."
-
-#~ msgid "edit"
-#~ msgstr "modifier"
-
-#~ msgid "Reference: %s"
-#~ msgstr "Référence: %s"
-
-#~ msgctxt "notification type"
-#~ msgid "error"
-#~ msgstr "erreur"
-
-#~ msgctxt "notification type"
-#~ msgid "warning"
-#~ msgstr "attention"
-
-#~ msgid "%1$d %2$s notice has been dismissed &mdash; <a id=\"%3$s\">show the %2$s message</a>."
-#~ msgid_plural "%1$d %2$s notices have been dismissed &mdash; <a id=\"%3$s\">show the %2$s messages</a>."
-#~ msgstr[0] "%1$d avis d'%2$s a été masqué et/ou ignoré &mdash; <a id=\"%3$s\">démasquer et afficher le message d'%2$s</a>."
-#~ msgstr[1] "%1$d avis d'%2$ss ont été masqués et/ou ignorés &mdash; <a id=\"%3$s\">démasquer et afficher les message d'%2$ss</a>."
-
-#~ msgid "Block Filter Output"
-#~ msgstr "Block Filter Output"
-
-#~ msgid "JSM's Block Filter Output"
-#~ msgstr "JSM's Block Filter Output"
-
-#~ msgid "Monitor the content filter and fix incorrectly coded filter hooks (that send text to the webpage instead of returning it, as all filter hooks must)."
-#~ msgstr "Surveille le filtre de contenu et corrige les crochets de filtre codés incorrectement (qui envoient du texte à la page Web au lieu de le retourner, comme tous les crochets de filtre doivent)."
