@@ -250,10 +250,10 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		private static function is_https( $url = '' ) {
 
-			static $cache = array();
+			static $local_cache = array();
 
-			if ( isset( $cache[ $url ] ) ) {
-				return $cache[ $url ];
+			if ( isset( $local_cache[ $url ] ) ) {
+				return $local_cache[ $url ];
 			}
 
 			if ( ! empty( $url ) ) {
@@ -262,17 +262,17 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 					parse_url( $url, PHP_URL_SCHEME ) === 'https' ) {
 
-					return $cache[ $url ] = true;
+					return $local_cache[ $url ] = true;
 
 				} else {
-					return $cache[ $url ] = false;
+					return $local_cache[ $url ] = false;
 				}
 
 			} else {
 
 				if ( is_ssl() ) {
 
-					return $cache[ $url ] = true;
+					return $local_cache[ $url ] = true;
 
 				/**
 				 * In some setups, HTTP_X_FORWARDED_PROTO might
@@ -284,16 +284,16 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
 					strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
 
-					return $cache[ $url ] = true;
+					return $local_cache[ $url ] = true;
 
 				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) && 
 					strtolower( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) === 'on' ) {
 
-					return $cache[ $url ] = true;
+					return $local_cache[ $url ] = true;
 				}
 			}
 
-			return $cache[ $url ] = false;
+			return $local_cache[ $url ] = false;
 		}
 	}
 
