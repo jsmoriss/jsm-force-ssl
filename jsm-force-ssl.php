@@ -74,7 +74,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 				add_filter( 'home_url', array( __CLASS__, 'update_single_url' ), 1000, 4 );
 
-				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -9000 );
+				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -10000 );
 			}
 
 			if ( FORCE_SSL_ADMIN ) {
