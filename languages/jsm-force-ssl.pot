@@ -1,8 +1,8 @@
-# Copyright (C) 2019 JSM's Force SSL / HTTPS
-# This file is distributed under the same license as the JSM's Force SSL / HTTPS package.
+# Copyright (C) 2019 JSM's Force HTTP to HTTPS
+# This file is distributed under the same license as the JSM's Force HTTP to HTTPS package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Force SSL / HTTPS 3.1.0\n"
+"Project-Id-Version: JSM's Force HTTP to HTTPS 3.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-force-ssl\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #. Plugin Name of the plugin/theme
-msgid "JSM's Force SSL / HTTPS"
+msgid "JSM's Force HTTP to HTTPS"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -22,8 +22,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Safe, amazingly fast, simple and effective - force HTTP URLs to HTTPS using "
-"WordPress filters and permanent redirects."
+"No setup required - force HTTP URLs to HTTPS using WordPress filters for "
+"speed and reliability, with 301 redirects for better SEO."
 msgstr ""
 
 #. Author of the plugin/theme

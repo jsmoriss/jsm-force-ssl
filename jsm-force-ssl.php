@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: JSM's Force SSL / HTTPS
+ * Plugin Name: JSM's Force HTTP to HTTPS
  * Text Domain: jsm-force-ssl
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/jsm-force-ssl/
@@ -9,7 +9,7 @@
  * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: Safe, amazingly fast, simple and effective - force HTTP URLs to HTTPS using WordPress filters and permanent redirects.
+ * Description: No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for better SEO.
  * Requires PHP: 5.6
  * Requires At Least: 3.9
  * Tested Up To: 5.2.2
