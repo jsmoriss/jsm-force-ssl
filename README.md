@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force HTTP to HTTPS</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for better SEO.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for best SEO.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.2</td></tr>
@@ -15,7 +15,7 @@
 
 <p><strong>A simple, fast, and effective way to force HTTP URLs to HTTPS dynamically.</strong></p>
 
-<p><strong>Significantly different than other plugins of this type</strong> (<em>in a good way</em>):</p>
+<p><strong>Significantly different than other plugins of this type</strong> (<em>in the best way</em>):</p>
 
 <p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. Using PHP's output filter is error prone and much slower than hooking native WordPress filters in combination with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 

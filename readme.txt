@@ -13,13 +13,13 @@ Requires At Least: 3.9
 Tested Up To: 5.2.2
 Stable Tag: 3.1.0
 
-No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for better SEO.
+No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for best SEO.
 
 == Description ==
 
 **A simple, fast, and effective way to force HTTP URLs to HTTPS dynamically.**
 
-**Significantly different than other plugins of this type** (*in a good way*):
+**Significantly different than other plugins of this type** (*in the best way*):
 
 Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document. Using PHP's output filter is error prone and much slower than hooking native WordPress filters in combination with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
