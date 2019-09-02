@@ -9,7 +9,7 @@
  * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for better SEO.
+ * Description: No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for best SEO.
  * Requires PHP: 5.6
  * Requires At Least: 3.9
  * Tested Up To: 5.2.2

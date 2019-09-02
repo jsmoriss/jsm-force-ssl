@@ -23,7 +23,7 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "No setup required - force HTTP URLs to HTTPS using WordPress filters for "
-"speed and reliability, with 301 redirects for better SEO."
+"speed and reliability, with 301 redirects for best SEO."
 msgstr ""
 
 #. Author of the plugin/theme
