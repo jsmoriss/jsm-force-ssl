@@ -13,7 +13,7 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, fast, and effective way to make sure URLs get redirected to HTTPS dynamically.</strong></p>
+<p><strong>A simple, fast, and effective way to force HTTP URLs to HTTPS dynamically.</strong></p>
 
 <p><strong>Significantly different than other plugins of this type</strong> (<em>in a good way</em>):</p>
 

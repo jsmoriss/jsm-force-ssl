@@ -17,7 +17,7 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters for speed a
 
 == Description ==
 
-**A simple, fast, and effective way to make sure URLs get redirected to HTTPS dynamically.**
+**A simple, fast, and effective way to force HTTP URLs to HTTPS dynamically.**
 
 **Significantly different than other plugins of this type** (*in a good way*):
 
