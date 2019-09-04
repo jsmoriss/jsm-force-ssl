@@ -17,7 +17,7 @@
 
 <p><strong>Significantly different than other plugins of this type</strong> (<em>in the best way</em>):</p>
 
-<p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document. Using PHP's output filter is error prone and much slower than hooking native WordPress filters in combination with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
+<p>Other plugins of this type use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document - using PHP's output filter is error prone and much slower than hooking native WordPress filters with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
 <p><strong>Checks for and honors proxy / load-balancing variables:</strong></p>
 
@@ -37,8 +37,8 @@
 <h4>Suggested plugins to improve social and SEO ranking:</h4>
 
 <ul>
-<li><p>The <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a> makes sure your content looks great on all social and search sites - no matter how URLs are crawled, shared, re-shared, posted, or embedded!</p></li>
-<li><p>The <a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup add-on</a> for WPSSO Core offers Schema JSON-LD / Google Rich Results markup for Articles, Events, Local Business, Products, Recipes, Reviews and many more.</p></li>
+<li><p>The <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a> makes sure your content looks great on all social and search sites, no matter how URLs are crawled, shared, re-shared, posted or embedded!</p></li>
+<li><p>The <a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup add-on</a> provides Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.</p></li>
 </ul>
 
 

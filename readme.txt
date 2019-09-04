@@ -21,7 +21,7 @@ No setup required - force HTTP URLs to HTTPS using WordPress filters for speed a
 
 **Significantly different than other plugins of this type** (*in the best way*):
 
-Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document. Using PHP's output filter is error prone and much slower than hooking native WordPress filters in combination with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+Other plugins of this type use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document - using PHP's output filter is error prone and much slower than hooking native WordPress filters with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
 **Checks for and honors proxy / load-balancing variables:**
 
@@ -38,9 +38,9 @@ There are no plugin settings to adjust, and no changes are made to your WordPres
 
 = Suggested plugins to improve social and SEO ranking: =
 
-* The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites - no matter how URLs are crawled, shared, re-shared, posted, or embedded!
+* The [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) makes sure your content looks great on all social and search sites, no matter how URLs are crawled, shared, re-shared, posted or embedded!
 
-* The [WPSSO Schema JSON-LD Markup add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/) for WPSSO Core offers Schema JSON-LD / Google Rich Results markup for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
+* The [WPSSO Schema JSON-LD Markup add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/) provides Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
 
 == Installation ==
 
