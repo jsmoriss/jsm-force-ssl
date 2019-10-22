@@ -1,4 +1,4 @@
-=== HTTP to HTTPS | Simple, Safe, Reliable, and Best for SEO ===
+=== HTTP to HTTPS | Simple, Safe, and Best for SEO ===
 Plugin Name: JSM's Force HTTP to HTTPS
 Plugin Slug: jsm-force-ssl
 Text Domain: jsm-force-ssl
