@@ -1,4 +1,4 @@
-=== JSM's Force HTTP to HTTPS | Simple, Fast, Effective, Best for SEO ===
+=== HTTP to HTTPS | Simple, Safe, Reliable, and Best for SEO ===
 Plugin Name: JSM's Force HTTP to HTTPS
 Plugin Slug: jsm-force-ssl
 Text Domain: jsm-force-ssl
@@ -13,15 +13,17 @@ Requires At Least: 3.9
 Tested Up To: 5.3
 Stable Tag: 3.1.0
 
-No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for best SEO.
+No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent 301 redirects for best SEO.
 
 == Description ==
 
-**A simple, fast, and effective way to force HTTP URLs to HTTPS dynamically.**
+**A simple, safe, and reliable way to force HTTP URLs to HTTPS dynamically.**
+
+No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent 301 redirects for best SEO.
 
 **Significantly different than other plugins of this type** (*in the best way*):
 
-Other plugins of this type use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage document - using PHP's output filter is error prone and much slower than hooking native WordPress filters with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+Similar plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage, which is error prone and slower than using native WordPress filters with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
 **Checks for and honors proxy / load-balancing variables:**
 

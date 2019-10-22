@@ -1,8 +1,8 @@
-<h1>JSM&#039;s Force HTTP to HTTPS | Simple, Fast, Effective, Best for SEO</h1>
+<h1>HTTP to HTTPS</h1><h3>Simple, Safe, Reliable, and Best for SEO</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force HTTP to HTTPS</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for best SEO.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent 301 redirects for best SEO.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.3</td></tr>
@@ -13,11 +13,13 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, fast, and effective way to force HTTP URLs to HTTPS dynamically.</strong></p>
+<p><strong>A simple, safe, and reliable way to force HTTP URLs to HTTPS dynamically.</strong></p>
+
+<p>No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent 301 redirects for best SEO.</p>
 
 <p><strong>Significantly different than other plugins of this type</strong> (<em>in the best way</em>):</p>
 
-<p>Other plugins of this type use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage document - using PHP's output filter is error prone and much slower than hooking native WordPress filters with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
+<p>Similar plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage, which is error prone and slower than using native WordPress filters with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
 <p><strong>Checks for and honors proxy / load-balancing variables:</strong></p>
 
