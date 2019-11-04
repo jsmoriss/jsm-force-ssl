@@ -8,7 +8,7 @@
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.3</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>redirect, force, ssl, https, secure, upload, force_ssl, force_ssl_admin, force_ssl_login, proxy, load balancing</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>mixed content, insecure content, force ssl, https, ssl, secure, upload, proxy, load balancing</td></tr>
 </table>
 
 <h2>Description</h2>
