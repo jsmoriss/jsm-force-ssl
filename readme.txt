@@ -21,11 +21,11 @@ No setup required! Simply activate to force HTTP URLs to HTTPS using native Word
 
 No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent 301 redirects for best SEO.
 
-**SIGNIFICANTLY DIFFERENT than other plugins of this type** (*in the very best way*):
+**SIGNIFICANTLY DIFFERENT than other plugins of this type** (*in the best way*):
 
 Other plugins of this type use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage, which is error prone and slower than using native WordPress filters with permanent 301 redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
-**Honors proxy / load-balancing variables for advanced / large web sites:**
+**Honors proxy / load-balancing variables for advanced hosting environment:**
 
 * HTTP_X_FORWARDED_PROTO
 * HTTP_X_FORWARDED_SSL
