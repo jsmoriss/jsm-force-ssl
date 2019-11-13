@@ -25,7 +25,7 @@ No setup required - simply activate the plugin to force HTTP URLs to HTTPS using
 
 Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search and replace URLs within the webpage HTML, which is error prone and affects caching performance.
 
-This plugin uses native WordPress filters for maximum caching compatibility and performance, with 301 permanent redirects ([which are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
+This plugin uses native WordPress filters for maximum caching compatibility and performance, with 301 permanent redirects for best SEO ([301 redirects are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
 **Honors proxy / load-balancing variables for large hosting environments:**
 
