@@ -15,7 +15,9 @@
 
 <p><strong>A simple, safe, and reliable way to force HTTP URLs to HTTPS dynamically:</strong></p>
 
-<p>No setup required - simply activate the plugin to force HTTP URLs to HTTPS using native WordPress filters and 301 permanent redirects for best SEO.</p>
+<p>No setup required!</p>
+
+<p>Simply activate the plugin to force HTTP URLs to HTTPS.</p>
 
 <p><strong>SIGNIFICANTLY DIFFERENT than other plugins of this type</strong> (<em>in the best way</em>):</p>
 
