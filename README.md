@@ -21,9 +21,9 @@
 
 <p><strong>SIGNIFICANTLY DIFFERENT than other plugins of this type</strong> (<em>in the best way</em>):</p>
 
-<p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage HTML, which is error prone and affects caching performance.</p>
+<p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search &amp; replace URLs in the webpage HTML, which is error prone and negatively affects caching performance.</p>
 
-<p>This plugin uses native WordPress filters for maximum caching compatibility and performance, with 301 permanent redirects for best SEO (<a href="https://en.wikipedia.org/wiki/HTTP_301">301 redirects are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
+<p>This plugin uses native WordPress filters instead for maximum performance and caching compatibility, along with 301 permanent redirects for best SEO (<a href="https://en.wikipedia.org/wiki/HTTP_301">301 redirects are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
 <p><strong>Honors proxy / load-balancing variables for large hosting environments:</strong></p>
 
