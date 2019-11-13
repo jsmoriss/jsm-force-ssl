@@ -32,7 +32,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force HTTP to HTTPS</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent 301 redirects for best SEO.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and 301 permanent redirects for best SEO.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.3</td></tr>
@@ -45,11 +45,13 @@
 
 <p><strong>A simple, safe, and reliable way to force HTTP URLs to HTTPS dynamically.</strong></p>
 
-<p>No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent 301 redirects for best SEO.</p>
+<p>No setup required! Simply activate the plugin to force HTTP URLs to HTTPS using native WordPress filters and 301 permanent redirects for best SEO.</p>
 
 <p><strong>SIGNIFICANTLY DIFFERENT than other plugins of this type</strong> (<em>in the best way</em>):</p>
 
-<p>Other plugins of this type use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage, which is error prone and slower than using native WordPress filters with permanent 301 redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
+<p>Other plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search and replace URLs within the webpage HTML, which is error prone and affects caching performance.</p>
+
+<p>This plugin uses native WordPress filters for maximum caching compatibility and performance, with 301 permanent redirects (<a href="https://en.wikipedia.org/wiki/HTTP_301">which are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
 <p><strong>Honors proxy / load-balancing variables for large hosting environments:</strong></p>
 
