@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WordPress Social Sharing Optimization (WPSSO) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Force SSL / HTTPS 3.1.0\n"
+"Project-Id-Version: JSM's Force SSL / HTTPS 3.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-force-ssl\n"
-"POT-Creation-Date: 2019-08-05 09:15-0700\n"
-"PO-Revision-Date: 2019-08-05 09:19-0700\n"
+"POT-Creation-Date: 2019-11-13 11:50-0800\n"
+"PO-Revision-Date: 2019-11-13 11:53-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -16,16 +16,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Plugin Name of the plugin/theme
-msgid "JSM's Force SSL / HTTPS"
-msgstr "JSM's Force SSL / HTTPS"
+msgid "JSM's Force HTTP to HTTPS"
+msgstr "JSM's Force HTTP to HTTPS"
 
 #. Plugin URI of the plugin/theme
 msgid "https://surniaulula.com/extend/plugins/jsm-force-ssl/"
 msgstr "https://surniaulula.com/extend/plugins/jsm-force-ssl/"
 
 #. Description of the plugin/theme
-msgid "Safe, amazingly fast, simple and effective - force HTTP URLs to HTTPS using WordPress filters and permanent redirects."
-msgstr "Sécuritaire, rapide, simple et efficace - forcez les URL HTTP en HTTPS à l'aide de filtres WordPress et de redirections permanentes."
+msgid "No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for best SEO."
+msgstr "Aucune configuration requise - force les URL HTTP à HTTPS à l'aide de filtres WordPress pour rapidité et fiabilité, avec redirections 301 pour un meilleur SEO."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
