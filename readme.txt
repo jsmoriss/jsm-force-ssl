@@ -25,7 +25,7 @@ Simply activate the plugin to force HTTP URLs to HTTPS.
 
 **SIGNIFICANTLY DIFFERENT than other plugins of this type** (*in the best way*):
 
-Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search &amp; replace URLs in the webpage HTML, which is error prone and negatively affects caching performance.
+Other plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search &amp; replace URLs in the webpage HTML, which is an error prone technique and negatively affects caching performance.
 
 This plugin uses native WordPress filters instead, for maximum performance and caching compatibility (this plugin does not affect performance), along with 301 permanent redirects for best SEO ([301 redirects are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
