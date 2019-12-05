@@ -30,9 +30,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Define some standard WordPress constants, if not already defined. These
- * constants can be pre-defined as false in wp-config.php to turn disable a
- * specific forced SSL feature.
+ * Define some standard WordPress constants, if not already defined. These constants can be pre-defined as false in wp-config.php
+ * to turn disable a specific forced SSL feature.
  */
 if ( ! defined( 'FORCE_SSL' ) ) {
 	define( 'FORCE_SSL', true );
