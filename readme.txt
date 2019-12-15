@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
 Tags: mixed content, insecure content, force ssl, https, ssl, secure, upload, proxy, load balancing
 Contributors: jsmoriss
-Requires PHP: 5.6
+Requires PHP: 5.5
 Requires At Least: 3.9
 Tested Up To: 5.3.1
 Stable Tag: 3.1.1
