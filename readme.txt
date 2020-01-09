@@ -13,7 +13,7 @@ Requires At Least: 4.0
 Tested Up To: 5.3.2
 Stable Tag: 3.1.1
 
-No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress filters and 301 permanent redirects for best SEO.
+No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress features and permanent redirects for best SEO.
 
 == Description ==
 
