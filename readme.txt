@@ -1,4 +1,4 @@
-=== JSM's Force HTTP to HTTPS / SSL | Simple, Fast, Cache Compatible, and Best for SEO ===
+=== JSM's Force HTTP to HTTPS / SSL - Simple, Fast, Cache Compatible, and Best for SEO ===
 Plugin Name: JSM's Force HTTP to HTTPS
 Plugin Slug: jsm-force-ssl
 Text Domain: jsm-force-ssl
@@ -13,7 +13,7 @@ Requires At Least: 4.0
 Tested Up To: 5.3.2
 Stable Tag: 3.1.1
 
-No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress features and permanent redirects for best SEO.
+No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.
 
 == Description ==
 

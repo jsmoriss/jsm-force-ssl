@@ -1,8 +1,8 @@
-<h1>JSM&#039;s Force HTTP to HTTPS / SSL</h1><h3>Simple, Fast, Cache Compatible, and Best for SEO</h3>
+<h1>JSM&#039;s Force HTTP to HTTPS / SSL - Simple, Fast, Cache Compatible, and Best for SEO</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force HTTP to HTTPS</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required! Simply activate to force HTTP URLs to HTTPS using native WordPress features and permanent redirects for best SEO.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.1.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.0 or newer</td></tr>
