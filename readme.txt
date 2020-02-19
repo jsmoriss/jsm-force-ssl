@@ -17,11 +17,9 @@ No setup required - simply activate to force HTTP URLs to HTTPS using native Wor
 
 == Description ==
 
-**A simple, safe, and reliable way to force HTTP URLs to HTTPS dynamically:**
+**A simple, safe and reliable way to force HTTP URLs to HTTPS dynamically:**
 
-No setup required!
-
-Simply activate the plugin to force HTTP URLs to HTTPS.
+No setup required &mdash; simply activate the plugin to force HTTP URLs to HTTPS.
 
 **SIGNIFICANTLY DIFFERENT than other plugins of this type** (*in the best way*):
 

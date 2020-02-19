@@ -14,11 +14,9 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, safe, and reliable way to force HTTP URLs to HTTPS dynamically:</strong></p>
+<p><strong>A simple, safe and reliable way to force HTTP URLs to HTTPS dynamically:</strong></p>
 
-<p>No setup required!</p>
-
-<p>Simply activate the plugin to force HTTP URLs to HTTPS.</p>
+<p>No setup required &mdash; simply activate the plugin to force HTTP URLs to HTTPS.</p>
 
 <p><strong>SIGNIFICANTLY DIFFERENT than other plugins of this type</strong> (<em>in the best way</em>):</p>
 
