@@ -53,6 +53,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public function __construct() {
 
+			add_action( 'plugins_loaded', array( __CLASS__, 'init_textdomain' ) );
+
 			/**
 			 * If WordPress is hosted behind a reverse proxy that provides SSL, but is hosted itself without SSL, these
 			 * options will initially send any requests into an infinite redirect loop. To avoid this, you may
@@ -94,8 +96,6 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			add_filter( 'the_content', array( __CLASS__, 'filter_content_text' ), 1000, 1 );
 
 			add_filter( 'widget_text', array( __CLASS__, 'filter_content_text' ), 1000, 1 );
-
-			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 		}
 
 		public static function &get_instance() {
@@ -107,7 +107,15 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return self::$instance;
 		}
 
-		public static function load_textdomain() {
+		public static function init_textdomain() {
+
+			static $loaded = null;
+
+			if ( null !== $loaded ) {
+				return;
+			}
+
+			$loaded = true;
 
 			load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 		}
