@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.2
  * Tested Up To: 5.4.1
- * Version: 3.1.1
+ * Version: 3.2.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -101,6 +101,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		public static function &get_instance() {
 
 			if ( null === self::$instance ) {
+
 				self::$instance = new self;
 			}
 
@@ -112,6 +113,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			static $loaded = null;
 
 			if ( null !== $loaded ) {
+
 				return;
 			}
 
@@ -147,6 +149,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		public static function upload_dir_urls( $param ) {
 
 			foreach ( array( 'url', 'baseurl' ) as $key ) {
+
 				$param[ $key ] = self::update_single_url( $param[ $key ] );
 			}
 
@@ -162,18 +165,25 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		public static function update_single_url( $url, $path = '', $scheme = null, $blog_id = null ) {
 
 			if ( 0 === strpos( $url, '/' ) ) {		// Skip relative URLs.
+
 				return $url;
 			}
 
 			if ( null === $scheme ) {
+
 				$prot_slash = self::get_prot() . '://';
+
 			} elseif ( 'http' === $scheme || 'https' === $scheme ) {
+
 				$prot_slash = $scheme . '://';
+
 			} else {
+
 				return $url;
 			}
 
 			if ( 0 === strpos( $url, $prot_slash ) ) {	// Skip correct URLs.
+
 				return $url;
 			}
 
@@ -189,6 +199,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 				$https_home_url = self::update_single_url( $http_home_url );
 
 				if ( $http_home_url !== $https_home_url ) {	// Just in case.
+
 					$content = str_replace( $http_home_url, $https_home_url, $content );
 				}
 			}
@@ -205,6 +216,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		private static function maybe_set_server_https_on() {
 
 			if ( ! isset( $_SERVER[ 'HTTPS' ] ) || $_SERVER[ 'HTTPS' ] !== 'on' ) {;
+
 				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
 					strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
 
