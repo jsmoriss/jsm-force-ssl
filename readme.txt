@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.2
 Tested Up To: 5.4.1
-Stable Tag: 3.1.1
+Stable Tag: 3.2.0
 
 No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.
 
@@ -86,9 +86,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.1 (2019/11/13)**
-
-Updated the tested to value for WordPress v5.3.
+**Version 3.2.0 (2020/05/08)**
 
 * **New Features**
 	* None.
@@ -97,22 +95,14 @@ Updated the tested to value for WordPress v5.3.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
-
-**Version 3.1.0 (2019/05/07)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added support for the `$scheme` argument when filtering the 'home_url' and 'site_url' values.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
+	* Maintenance release - minor code formatting changes.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
 
 == Upgrade Notice ==
 
-= 3.1.1 =
+= 3.2.0 =
 
-(2019/11/13) Updated the tested to value for WordPress v5.3.
+(2020/05/08) Maintenance release - minor code formatting changes.
 
