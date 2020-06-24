@@ -1,4 +1,4 @@
-=== JSM's Force HTTP to HTTPS (SSL) - Simple, Safe, and Best for SEO ===
+=== JSM's Force HTTP to HTTPS (SSL) - Simple, Safe, FAST and Best for SEO ===
 Plugin Name: JSM's Force HTTP to HTTPS
 Plugin Slug: jsm-force-ssl
 Text Domain: jsm-force-ssl
@@ -21,7 +21,7 @@ No setup required - simply activate to force HTTP URLs to HTTPS using native Wor
 
 No setup required &mdash; simply activate the plugin to force HTTP URLs to HTTPS.
 
-**SIGNIFICANTLY FASTER than other plugins of this type:**
+**SIGNIFICANTLY FASTER than other popular plugins of this type:**
 
 Other well known plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search &amp; replace URLs in the rendered HTML, which is a technique that is error prone and *negatively affects caching performance*.
 
