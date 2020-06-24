@@ -18,11 +18,11 @@
 
 <p>No setup required &mdash; simply activate the plugin to force HTTP URLs to HTTPS.</p>
 
-<p><strong>SIGNIFICANTLY DIFFERENT than other plugins of this type</strong> (<em>in the best way</em>):</p>
+<p><strong>SIGNIFICANTLY FASTER than other plugins of this type:</strong></p>
 
-<p>Other plugins of this type use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search &amp; replace URLs in the rendered HTML, which is a technique that is error prone and negatively affects caching performance.</p>
+<p>Other well known plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search &amp; replace URLs in the rendered HTML, which is a technique that is error prone and <em>negatively affects caching performance</em>.</p>
 
-<p>This plugin uses native WordPress filters, instead of PHP's output buffer, for maximum reliability, performance and caching compatibility (this plugin does not affect caching performance), along with 301 permanent redirects for best SEO (<a href="https://en.wikipedia.org/wiki/HTTP_301">301 redirects are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
+<p>This plugin uses native WordPress filters instead of PHP's output buffer for maximum reliability, performance and caching compatibility (<em>this plugin does not affect caching performance</em>), along with 301 permanent redirects for best SEO (<a href="https://en.wikipedia.org/wiki/HTTP_301">301 redirects are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
 <p><strong>Honors proxy / load-balancing variables for large hosting environments:</strong></p>
 
@@ -37,7 +37,7 @@
 
 <p><strong>Simply activate the plugin and you're done:</strong></p>
 
-<p>There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.</p>
+<p>There are no plugin settings to adjust and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.</p>
 
 
 <h2>Installation</h2>
