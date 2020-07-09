@@ -1,4 +1,4 @@
-<h1>JSM&#039;s Force HTTP to HTTPS (SSL) - Simple, Safe, FAST and Best for SEO</h1>
+<h1>JSM&#039;s Force HTTP to HTTPS (SSL) - Simple, Reliable and Fast</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force HTTP to HTTPS</td></tr>
@@ -14,7 +14,7 @@
 
 <h2>Description</h2>
 
-<p><strong>A simple, safe and reliable way to force HTTP URLs to HTTPS dynamically:</strong></p>
+<p><strong>A simple, safe, and reliable way to force HTTP URLs to HTTPS dynamically:</strong></p>
 
 <p>No setup required &mdash; simply activate the plugin to force HTTP URLs to HTTPS.</p>
 
