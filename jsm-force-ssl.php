@@ -26,6 +26,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -34,14 +35,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * to turn disable a specific forced SSL feature.
  */
 if ( ! defined( 'FORCE_SSL' ) ) {
+
 	define( 'FORCE_SSL', true );
 }
 
 if ( ! defined( 'FORCE_SSL_ADMIN' ) ) {
+
 	define( 'FORCE_SSL_ADMIN', true );
 }
 
 if ( ! defined( 'FORCE_SSL_LOGIN' ) ) {
+
 	define( 'FORCE_SSL_LOGIN', true );
 }
 
@@ -238,10 +242,12 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			} elseif ( is_admin() )  {
 
 				if ( FORCE_SSL_ADMIN ) {
+
 					return 'https';
 				}
 
 			} elseif ( FORCE_SSL ) {
+
 				return 'https';
 			}
 
@@ -257,6 +263,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			static $local_cache = array();
 
 			if ( isset( $local_cache[ $url ] ) ) {
+
 				return $local_cache[ $url ];
 			}
 
