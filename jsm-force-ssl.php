@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.5.1
- * Version: 3.2.0
+ * Version: 3.3.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -57,7 +57,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public function __construct() {
 
-			add_action( 'plugins_loaded', array( __CLASS__, 'init_textdomain' ) );
+			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
 			/**
 			 * If WordPress is hosted behind a reverse proxy that provides SSL, but is hosted itself without SSL, these
@@ -112,18 +112,18 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			return self::$instance;
 		}
 
-		public static function init_textdomain() {
+		public function init_textdomain() {
 
-			static $loaded = null;
+			static $local_cache = null;
 
-			if ( null !== $loaded ) {
+			if ( null === $local_cache ) {
 
-				return;
+				$local_cache = 'jsm-force-ssl';
+
+				load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 			}
 
-			$loaded = true;
-
-			load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
+			return $local_cache;
 		}
 
 		/**
