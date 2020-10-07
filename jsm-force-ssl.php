@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.5.1
- * Version: 3.3.0-dev.1
+ * Version: 3.3.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -168,7 +168,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		public static function update_single_url( $url, $path = '', $scheme = null, $blog_id = null ) {
 
-			if ( 0 === strpos( $url, '/' ) ) {		// Skip relative URLs.
+			if ( 0 === strpos( $url, '/' ) ) {	// Skip relative URLs.
 
 				return $url;
 			}
@@ -181,7 +181,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 				$prot_slash = $scheme . '://';
 
-			} else {
+			} else {	// $scheme is not http or https.
 
 				return $url;
 			}
@@ -275,9 +275,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 					return $local_cache[ $url ] = true;
 
-				} else {
-					return $local_cache[ $url ] = false;
 				}
+
+				return $local_cache[ $url ] = false;
 
 			} else {
 
