@@ -114,16 +114,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public function init_textdomain() {
 
-			static $local_cache = null;
-
-			if ( null === $local_cache ) {
-
-				$local_cache = 'jsm-force-ssl';
-
-				load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
-			}
-
-			return $local_cache;
+			load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 		}
 
 		/**
