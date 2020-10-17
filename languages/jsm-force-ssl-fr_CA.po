@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Force HTTP to HTTPS (SSL) 3.3.0\n"
+"Project-Id-Version: JSM's Force HTTP to HTTPS 3.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-force-ssl\n"
-"POT-Creation-Date: 2020-10-07 16:14-0700\n"
-"PO-Revision-Date: 2020-10-07 16:14-0700\n"
+"POT-Creation-Date: 2020-10-17 11:22-0700\n"
+"PO-Revision-Date: 2020-10-17 11:24-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "JSM's Force HTTP to HTTPS"
-msgstr "JSM's Force HTTP to HTTPS"
+msgstr "Force HTTP à HTTPS de JSM "
 
 #. Plugin URI of the plugin/theme
 msgid "https://surniaulula.com/extend/plugins/jsm-force-ssl/"
