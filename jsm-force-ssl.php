@@ -53,7 +53,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 	class JSM_Force_SSL {
 
-		private static $instance = null;
+		private static $instance = null;	// JSM_Force_SSL class object.
 
 		public function __construct() {
 
