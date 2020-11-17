@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.6
- * Version: 3.3.0
+ * Version: 3.4.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -57,6 +57,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public function __construct() {
 
+			$min_int = defined( 'PHP_INT_MIN' ) ? PHP_INT_MIN : -2147483648;    // Since PHP v7.0.0.
+			$max_int = defined( 'PHP_INT_MAX' ) ? PHP_INT_MAX : 2147483647;     // Since PHP 5.0.2.
+
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
 			/**
@@ -73,33 +76,33 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 			 */
 			if ( FORCE_SSL ) {
 
-				add_filter( 'home_url', array( __CLASS__, 'update_single_url' ), 1000, 4 );
+				add_filter( 'home_url', array( __CLASS__, 'update_single_url' ), $max_int, 4 );
 
-				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), -10000 );
+				add_action( 'init', array( __CLASS__, 'force_ssl_redirect' ), $min_int );
 			}
 
 			if ( FORCE_SSL_ADMIN ) {
 
-				add_filter( 'site_url', array( __CLASS__, 'update_single_url' ), 1000, 4 );
+				add_filter( 'site_url', array( __CLASS__, 'update_single_url' ), $max_int, 4 );
 			}
 
 			/**
 			 * Make sure URLs from the upload directory - like images in the Media Library - use the correct protocol.
 			 */
-			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), 1000, 1 );
+			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), $max_int, 1 );
 
 
 			/**
 			 * Adjust the URL returned by the WordPress plugins_url() function.
 			 */
-			add_filter( 'plugins_url', array( __CLASS__, 'update_single_url' ), 1000, 1 );
+			add_filter( 'plugins_url', array( __CLASS__, 'update_single_url' ), $max_int, 1 );
 
 			/**
 			 * Check the content for http images.
 			 */
-			add_filter( 'the_content', array( __CLASS__, 'filter_content_text' ), 1000, 1 );
+			add_filter( 'the_content', array( __CLASS__, 'filter_content_text' ), $max_int, 1 );
 
-			add_filter( 'widget_text', array( __CLASS__, 'filter_content_text' ), 1000, 1 );
+			add_filter( 'widget_text', array( __CLASS__, 'filter_content_text' ), $max_int, 1 );
 		}
 
 		public static function &get_instance() {
@@ -212,8 +215,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 			if ( ! isset( $_SERVER[ 'HTTPS' ] ) || $_SERVER[ 'HTTPS' ] !== 'on' ) {;
 
-				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && 
-					strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
+				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
 
 					$_SERVER[ 'HTTPS' ] = 'on';
 				}
