@@ -86,14 +86,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.3.0 (2020/10/07)**
-
-Maintenance release.
+**Version 3.4.0 (2020/11/17)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Updated the actions and filter hooks to use PHP_INT_MIN and PHP_INT_MAX.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -104,7 +102,7 @@ Maintenance release.
 
 == Upgrade Notice ==
 
-= 3.3.0 =
+= 3.4.0 =
 
-(2020/10/07) Maintenance release.
+(2020/11/17) Updated the actions and filter hooks to use PHP_INT_MIN and PHP_INT_MAX.
 
