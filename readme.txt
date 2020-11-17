@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.4
 Tested Up To: 5.6
-Stable Tag: 3.3.0
+Stable Tag: 3.4.0
 
 No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.
 
