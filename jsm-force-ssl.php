@@ -155,7 +155,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		}
 
 		/**
-		 * update_single_url() may be used to filter a single URL, or as a filter for the get_home_url() and get_site_url()
+		 * update_single_url() may be used to filter a single URL, or a filter for the get_home_url() and get_site_url()
 		 * functions.
 		 *
 		 * $scheme can be null, 'http', 'https', 'login', 'login_post', 'admin', or 'relative'.
@@ -190,7 +190,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 		public static function filter_content_text( $content ) {
 
-			$http_home_url = get_home_url( null, $path = '/', $scheme = 'http' );
+			$http_home_url = get_home_url( $blog_id = null, $path = '/', $scheme = 'http' );
 
 			if ( false !== strpos( $content, $http_home_url ) ) {	// Optimize.
 
