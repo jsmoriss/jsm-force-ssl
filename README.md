@@ -33,11 +33,11 @@
 
 <p><strong>Requirements:</strong></p>
 
-<p>Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)</p>
+<p>Your web server must already be configured with an SSL certificate and able to handle HTTPS request. ;-)</p>
 
 <p><strong>Simply activate the plugin and you're done:</strong></p>
 
-<p>There are no plugin settings to adjust and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.</p>
+<p>There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.</p>
 
 
 <h2>Installation</h2>

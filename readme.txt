@@ -34,11 +34,11 @@ This plugin uses standard WordPress filters instead of PHP's output buffer for m
 
 **Requirements:**
 
-Your web server must be configured with an SSL certificate and able to handle HTTPS request. ;-)
+Your web server must already be configured with an SSL certificate and able to handle HTTPS request. ;-)
 
 **Simply activate the plugin and you're done:**
 
-There are no plugin settings to adjust and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.
+There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.
 
 == Installation ==
 
