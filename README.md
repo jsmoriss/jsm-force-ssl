@@ -18,6 +18,8 @@
 
 <p>No setup required &mdash; simply activate the plugin to force HTTP URLs to HTTPS.</p>
 
+<p>There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.</p>
+
 <p><strong>SIGNIFICANTLY FASTER than other popular plugins of this type:</strong></p>
 
 <p>Other well known plugins use <a href="https://secure.php.net/manual/en/function.ob-start.php">PHP's output buffer</a> to search &amp; replace URLs in the rendered HTML, which is a technique that is error prone and <em>negatively affects caching performance</em> (as changes are not cached).</p>
@@ -34,10 +36,6 @@
 <p><strong>Requirements:</strong></p>
 
 <p>Your web server must already be configured with an SSL certificate and able to handle HTTPS request. ;-)</p>
-
-<p><strong>Simply activate the plugin and you're done:</strong></p>
-
-<p>There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.</p>
 
 
 <h2>Installation</h2>

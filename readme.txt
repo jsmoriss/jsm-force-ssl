@@ -21,6 +21,8 @@ No setup required - simply activate to force HTTP URLs to HTTPS using native Wor
 
 No setup required &mdash; simply activate the plugin to force HTTP URLs to HTTPS.
 
+There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.
+
 **SIGNIFICANTLY FASTER than other popular plugins of this type:**
 
 Other well known plugins use [PHP's output buffer](https://secure.php.net/manual/en/function.ob-start.php) to search &amp; replace URLs in the rendered HTML, which is a technique that is error prone and *negatively affects caching performance* (as changes are not cached).
@@ -35,10 +37,6 @@ This plugin uses standard WordPress filters instead of PHP's output buffer for m
 **Requirements:**
 
 Your web server must already be configured with an SSL certificate and able to handle HTTPS request. ;-)
-
-**Simply activate the plugin and you're done:**
-
-There are no plugin settings to adjust, and no changes are made to your WordPress configuration &mdash; simply activate or deactivate the plugin to enable / disable the filters and dynamic redirects.
 
 == Installation ==
 
