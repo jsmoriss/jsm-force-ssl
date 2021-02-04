@@ -10,7 +10,7 @@ Tags: https, ssl, mixed content, insecure content, force ssl, simple, secure, up
 Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
-Tested Up To: 5.6
+Tested Up To: 5.6.1
 Stable Tag: 3.4.0
 
 No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.
