@@ -12,7 +12,7 @@
  * Description: No setup required - force HTTP URLs to HTTPS using WordPress filters for speed and reliability, with 301 redirects for best SEO.
  * Requires PHP: 7.0
  * Requires At Least: 4.5
- * Tested Up To: 5.6
+ * Tested Up To: 5.6.1
  * Version: 3.4.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
