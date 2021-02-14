@@ -26,11 +26,11 @@
 
 <p>This plugin uses standard WordPress filters instead of PHP's output buffer for maximum reliability, performance, caching compatibility, and uses 301 permanent redirects for best SEO results (<a href="https://en.wikipedia.org/wiki/HTTP_301">301 redirects are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
-<p><strong>Honors proxy / load-balancing variables for large hosting environments:</strong></p>
+<p><strong>Honors proxy / load-balancing HTTP headers for large hosting environments:</strong></p>
 
 <ul>
-<li>HTTP_X_FORWARDED_PROTO</li>
-<li>HTTP_X_FORWARDED_SSL</li>
+<li>X-Forwarded-Proto (aka HTTP_X_FORWARDED_PROTO)</li>
+<li>X-Forwarded-Ssl (aka HTTP_X_FORWARDED_SSL)</li>
 </ul>
 
 <h4>Plugin Requirements</h4>

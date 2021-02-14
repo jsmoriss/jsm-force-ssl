@@ -29,10 +29,10 @@ Other well known plugins use [PHP's output buffer](https://secure.php.net/manual
 
 This plugin uses standard WordPress filters instead of PHP's output buffer for maximum reliability, performance, caching compatibility, and uses 301 permanent redirects for best SEO results ([301 redirects are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
-**Honors proxy / load-balancing variables for large hosting environments:**
+**Honors proxy / load-balancing HTTP headers for large hosting environments:**
 
-* HTTP_X_FORWARDED_PROTO
-* HTTP_X_FORWARDED_SSL
+* X-Forwarded-Proto (aka HTTP_X_FORWARDED_PROTO)
+* X-Forwarded-Ssl (aka HTTP_X_FORWARDED_SSL)
 
 = Plugin Requirements =
 
@@ -88,6 +88,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.4.1 (2021/02/14)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Minor update for readme text and copyright date.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v4.5.
+
 **Version 3.4.0 (2020/11/17)**
 
 * **New Features**
@@ -103,6 +117,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v4.5.
 
 == Upgrade Notice ==
+
+= 3.4.1 =
+
+(2021/02/14) Minor update for readme text and copyright date.
 
 = 3.4.0 =
 
