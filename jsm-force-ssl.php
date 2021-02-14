@@ -262,12 +262,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 			if ( ! empty( $url ) ) {
 
-				if ( strpos( $url, '://' ) && 
-
-					parse_url( $url, PHP_URL_SCHEME ) === 'https' ) {
+				if ( strpos( $url, '://' ) && 'https' === parse_url( $url, PHP_URL_SCHEME ) ) {
 
 					return $local_cache[ $url ] = true;
-
 				}
 
 				return $local_cache[ $url ] = false;
@@ -286,7 +283,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 
 					return $local_cache[ $url ] = true;
 
-				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) && strtolower( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) === 'on' ) {
+				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) && 'on' === strtolower( $_SERVER[ 'HTTP_X_FORWARDED_SSL' ] ) ) {
 
 					return $local_cache[ $url ] = true;
 				}
