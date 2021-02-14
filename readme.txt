@@ -31,8 +31,8 @@ This plugin uses standard WordPress filters instead of PHP's output buffer for m
 
 **Honors proxy / load-balancing HTTP headers for complex hosting environments:**
 
-* X-Forwarded-Proto (aka 'HTTP_X_FORWARDED_PROTO' server value)
-* X-Forwarded-Ssl (aka 'HTTP_X_FORWARDED_SSL' server value)
+* `X-Forwarded-Proto` (aka `HTTP_X_FORWARDED_PROTO` server value)
+* `X-Forwarded-Ssl` (aka `HTTP_X_FORWARDED_SSL` server value)
 
 See [Web technology for developers &gt; HTTP &gt; HTTP headers &gt; X-Forwarded-Proto](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto) for more details.
 

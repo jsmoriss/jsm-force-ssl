@@ -29,8 +29,8 @@
 <p><strong>Honors proxy / load-balancing HTTP headers for complex hosting environments:</strong></p>
 
 <ul>
-<li>X-Forwarded-Proto (aka 'HTTP_X_FORWARDED_PROTO' server value)</li>
-<li>X-Forwarded-Ssl (aka 'HTTP_X_FORWARDED_SSL' server value)</li>
+<li><code>X-Forwarded-Proto</code> (aka <code>HTTP_X_FORWARDED_PROTO</code> server value)</li>
+<li><code>X-Forwarded-Ssl</code> (aka <code>HTTP_X_FORWARDED_SSL</code> server value)</li>
 </ul>
 
 <p>See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto">Web technology for developers &gt; HTTP &gt; HTTP headers &gt; X-Forwarded-Proto</a> for more details.</p>
