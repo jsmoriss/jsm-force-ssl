@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6.1
-Stable Tag: 3.4.0
+Stable Tag: 3.4.1
 
 No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.
 
@@ -29,10 +29,12 @@ Other well known plugins use [PHP's output buffer](https://secure.php.net/manual
 
 This plugin uses standard WordPress filters instead of PHP's output buffer for maximum reliability, performance, caching compatibility, and uses 301 permanent redirects for best SEO results ([301 redirects are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
-**Honors proxy / load-balancing HTTP headers for large hosting environments:**
+**Honors proxy / load-balancing HTTP headers for complex hosting environments:**
 
-* X-Forwarded-Proto (aka HTTP_X_FORWARDED_PROTO)
-* X-Forwarded-Ssl (aka HTTP_X_FORWARDED_SSL)
+* X-Forwarded-Proto (aka 'HTTP_X_FORWARDED_PROTO')
+* X-Forwarded-Ssl (aka 'HTTP_X_FORWARDED_SSL')
+
+See [Web technology for developers &gt; HTTP &gt; HTTP headers &gt; X-Forwarded-Proto](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto).
 
 = Plugin Requirements =
 
