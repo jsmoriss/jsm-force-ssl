@@ -248,8 +248,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		}
 
 		/**
-		 * Extend the WordPress is_ssl() function by also checking for proxy / load-balancing 'HTTP_X_FORWARDED_PROTO' and
-		 * 'HTTP_X_FORWARDED_SSL' web server variables.
+		 * Extend the WordPress is_ssl() capabilities by also checking for proxy / load-balancing 'HTTP_X_FORWARDED_PROTO'
+		 * and 'HTTP_X_FORWARDED_SSL' web server values.
 		 */
 		private static function is_https( $url = '' ) {
 
@@ -276,8 +276,8 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 					return $local_cache[ $url ] = true;
 
 				/**
-				 * In some setups, HTTP_X_FORWARDED_PROTO might contain a comma-separated list (ie. "http,https"),
-				 * so use strpos() to check for "https" within a possible comma-separated list.
+				 * In some environments, HTTP_X_FORWARDED_PROTO might contain a comma-separated list (ie.
+				 * "http,https"), so use strpos() to check for "https" within a possible comma-separated list.
 				 */
 				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
 
