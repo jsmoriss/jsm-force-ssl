@@ -213,7 +213,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		private static function maybe_set_server_https_on() {
 
-			if ( ! isset( $_SERVER[ 'HTTPS' ] ) || $_SERVER[ 'HTTPS' ] !== 'on' ) {;
+			if ( ! isset( $_SERVER[ 'HTTPS' ] ) || $_SERVER[ 'HTTPS' ] !== 'on' ) {
 
 				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
 
