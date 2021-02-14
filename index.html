@@ -33,7 +33,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Force HTTP to HTTPS</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.4.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.4.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.6.1</td></tr>
@@ -56,12 +56,14 @@
 
 <p>This plugin uses standard WordPress filters instead of PHP's output buffer for maximum reliability, performance, caching compatibility, and uses 301 permanent redirects for best SEO results (<a href="https://en.wikipedia.org/wiki/HTTP_301">301 redirects are considered best for SEO when moving from HTTP to HTTPS</a>).</p>
 
-<p><strong>Honors proxy / load-balancing HTTP headers for large hosting environments:</strong></p>
+<p><strong>Honors proxy / load-balancing HTTP headers for complex hosting environments:</strong></p>
 
 <ul>
-<li>X-Forwarded-Proto (aka HTTP_X_FORWARDED_PROTO)</li>
-<li>X-Forwarded-Ssl (aka HTTP_X_FORWARDED_SSL)</li>
+<li>X-Forwarded-Proto (aka 'HTTP_X_FORWARDED_PROTO')</li>
+<li>X-Forwarded-Ssl (aka 'HTTP_X_FORWARDED_SSL')</li>
 </ul>
+
+<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto">Web technology for developers &gt; HTTP &gt; HTTP headers &gt; X-Forwarded-Proto</a>.</p>
 
 <h4>Plugin Requirements</h4>
 
