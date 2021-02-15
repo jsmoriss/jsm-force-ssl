@@ -213,9 +213,9 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		 */
 		private static function maybe_set_server_https_on() {
 
-			if ( ! isset( $_SERVER[ 'HTTPS' ] ) || $_SERVER[ 'HTTPS' ] !== 'on' ) {
+			if ( ! isset( $_SERVER[ 'HTTPS' ] ) || 'on' !== $_SERVER[ 'HTTPS' ] ) {
 
-				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
+				if ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && false !== strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) ) {
 
 					$_SERVER[ 'HTTPS' ] = 'on';
 				}
@@ -279,7 +279,7 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 				 * In some environments, HTTP_X_FORWARDED_PROTO might contain a comma-separated list (ie.
 				 * "http,https"), so use strpos() to check for "https" within a possible comma-separated list.
 				 */
-				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) !== false ) {
+				} elseif ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) && false !== strpos( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ], 'https' ) ) {
 
 					return $local_cache[ $url ] = true;
 
