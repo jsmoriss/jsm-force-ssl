@@ -29,7 +29,7 @@ Other well known plugins use [PHP's output buffer](https://secure.php.net/manual
 
 This plugin uses standard WordPress filters instead of PHP's output buffer for maximum reliability, performance, caching compatibility, and uses 301 permanent redirects for best SEO results ([301 redirects are considered best for SEO when moving from HTTP to HTTPS](https://en.wikipedia.org/wiki/HTTP_301)).
 
-**Honors proxy / load-balancing HTTP headers for complex hosting environments:**
+**Supports advanced proxy / load-balancing HTTP headers:**
 
 * `X-Forwarded-Proto` (aka `HTTP_X_FORWARDED_PROTO` server value)
 * `X-Forwarded-Ssl` (aka `HTTP_X_FORWARDED_SSL` server value)
