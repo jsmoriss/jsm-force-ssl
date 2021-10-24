@@ -42,7 +42,7 @@ Your web server must already be configured with an SSL certificate and able to h
 
 = Need a Boost to your Social and Search Ranking? =
 
-Check out [the WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) to rank higher and improve click through rates by presenting your content at its best on **social sites** and in **search results** - no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
+[WPSSO is an advanced structured data plugin for WordPress SEO and SMO](https://wordpress.org/plugins/wpsso/) that helps you rank higher and improves click through rates by presenting your content at its best in **search results** and on **social sites** - no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
 
 == Installation ==
 
