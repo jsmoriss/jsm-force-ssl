@@ -40,10 +40,6 @@ See [Web technology for developers &gt; HTTP &gt; HTTP headers &gt; X-Forwarded-
 
 Your web server must already be configured with an SSL certificate and able to handle HTTPS request. ;-)
 
-= Need a Boost to your Social and Search Ranking? =
-
-[WPSSO is an advanced structured data plugin for WordPress SEO and SMO](https://wordpress.org/plugins/wpsso/) that helps you rank higher and improves click through rates by presenting your content at its best in **search results** and on **social sites** - no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
-
 == Installation ==
 
 = Automated Install =
