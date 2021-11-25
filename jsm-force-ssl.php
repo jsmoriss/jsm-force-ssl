@@ -49,11 +49,11 @@ if ( ! defined( 'FORCE_SSL_LOGIN' ) ) {
 	define( 'FORCE_SSL_LOGIN', true );
 }
 
-if ( ! class_exists( 'JSM_Force_SSL' ) ) {
+if ( ! class_exists( 'JsmForceSsl' ) ) {
 
-	class JSM_Force_SSL {
+	class JsmForceSsl {
 
-		private static $instance = null;	// JSM_Force_SSL class object.
+		private static $instance = null;	// JsmForceSsl class object.
 
 		public function __construct() {
 
@@ -293,5 +293,5 @@ if ( ! class_exists( 'JSM_Force_SSL' ) ) {
 		}
 	}
 
-	JSM_Force_SSL::get_instance();
+	JsmForceSsl::get_instance();
 }
