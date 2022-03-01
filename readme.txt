@@ -52,7 +52,7 @@ Your web server must already be configured with an SSL certificate and able to h
 
 Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
-* {major} = Major structural code changes / re-writes or incompatible API changes.
+* {major} = Major structural code changes and/or incompatible API changes (ie. risk of breaking changes).
 * {minor} = New functionality was added or improved in a backwards-compatible manner.
 * {bugfix} = Backwards-compatible bug fixes or small improvements.
 * {stage}.{level} = Pre-production release: dev < a (alpha) < b (beta) < rc (release candidate).
