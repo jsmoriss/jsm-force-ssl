@@ -66,7 +66,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 			 * If WordPress is hosted behind a reverse proxy that provides SSL, but is hosted itself without SSL, these
 			 * options will initially send any requests into an infinite redirect loop. To avoid this, you may
 			 * configure WordPress to recognize the HTTP_X_FORWARDED_PROTO header (assuming you have properly
-			 * configured the reverse proxy to set that header). 
+			 * configured the reverse proxy to set that header).
 			 */
 			self::maybe_set_server_https_on();
 
@@ -209,7 +209,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 		 * If WordPress is hosted behind a reverse proxy that provides SSL, but is hosted itself without SSL, these options
 		 * will initially send any requests into an infinite redirect loop. To avoid this, you may configure WordPress to
 		 * recognize the HTTP_X_FORWARDED_PROTO header (assuming you have properly configured the reverse proxy to set that
-		 * header). 
+		 * header).
 		 */
 		private static function maybe_set_server_https_on() {
 
