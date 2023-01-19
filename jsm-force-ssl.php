@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-/**
+/*
  * Define some standard WordPress constants, if not already defined. These constants can be pre-defined as false in wp-config.php
  * to turn disable a specific forced SSL feature.
  */
@@ -62,7 +62,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
-			/**
+			/*
 			 * If WordPress is hosted behind a reverse proxy that provides SSL, but is hosted itself without SSL, these
 			 * options will initially send any requests into an infinite redirect loop. To avoid this, you may
 			 * configure WordPress to recognize the HTTP_X_FORWARDED_PROTO header (assuming you have properly
@@ -70,7 +70,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 			 */
 			self::maybe_set_server_https_on();
 
-			/**
+			/*
 			 * WordPress should redirect back-end / admin URLs just fine, but the front-end may need some help. Hook
 			 * the 'init' action and check the protocol if FORCE_SSL is true.
 			 */
@@ -86,18 +86,18 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 				add_filter( 'site_url', array( __CLASS__, 'update_single_url' ), $max_int, 4 );
 			}
 
-			/**
+			/*
 			 * Make sure URLs from the upload directory - like images in the Media Library - use the correct protocol.
 			 */
 			add_filter( 'upload_dir', array( __CLASS__, 'upload_dir_urls' ), $max_int, 1 );
 
 
-			/**
+			/*
 			 * Adjust the URL returned by the WordPress plugins_url() function.
 			 */
 			add_filter( 'plugins_url', array( __CLASS__, 'update_single_url' ), $max_int, 1 );
 
-			/**
+			/*
 			 * Check the content for http images.
 			 */
 			add_filter( 'the_content', array( __CLASS__, 'filter_content_text' ), $max_int, 1 );
@@ -120,13 +120,13 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 			load_plugin_textdomain( 'jsm-force-ssl', false, 'jsm-force-ssl/languages/' );
 		}
 
-		/**
+		/*
 		 * Redirect from HTTP to HTTPS if the current webpage URL is not HTTPS. A 301 redirect is considered a best
 		 * practice when moving from HTTP to HTTPS. See https://en.wikipedia.org/wiki/HTTP_301 for more info.
 		 */
 		public static function force_ssl_redirect() {
 
-			/**
+			/*
 			 * Make sure web server variables exist in case WP is being used from the command line.
 			 */
 			if ( isset( $_SERVER[ 'HTTP_HOST' ] ) && isset( $_SERVER[ 'REQUEST_URI' ] ) ) {
@@ -140,7 +140,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 			}
 		}
 
-		/**
+		/*
 		 * Make sure URLs from the upload directory - like images in the Media Library - use the correct protocol. Adjusts
 		 * the 'url' and 'baseurl' array keys to match the current protocol being used (HTTP or HTTPS).
 		 */
@@ -154,7 +154,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 			return $param;
 		}
 
-		/**
+		/*
 		 * update_single_url() may be used to filter a single URL, or a filter for the get_home_url() and get_site_url()
 		 * functions.
 		 *
@@ -205,7 +205,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 			return $content;
 		}
 
-		/**
+		/*
 		 * If WordPress is hosted behind a reverse proxy that provides SSL, but is hosted itself without SSL, these options
 		 * will initially send any requests into an infinite redirect loop. To avoid this, you may configure WordPress to
 		 * recognize the HTTP_X_FORWARDED_PROTO header (assuming you have properly configured the reverse proxy to set that
@@ -247,7 +247,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 			return 'http';
 		}
 
-		/**
+		/*
 		 * Extend the WordPress is_ssl() capabilities by also checking for proxy / load-balancing 'HTTP_X_FORWARDED_PROTO'
 		 * and 'HTTP_X_FORWARDED_SSL' web server values.
 		 */
@@ -275,7 +275,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 
 					return $local_cache[ $url ] = true;
 
-				/**
+				/*
 				 * In some environments, HTTP_X_FORWARDED_PROTO might contain a comma-separated list (ie.
 				 * "http,https"), so use strpos() to check for "https" within a possible comma-separated list.
 				 */
