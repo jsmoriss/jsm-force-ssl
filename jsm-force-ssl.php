@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: JSM's Force HTTP to HTTPS
  * Text Domain: jsm-force-ssl
  * Domain Path: /languages
