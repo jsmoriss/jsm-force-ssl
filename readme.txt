@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
 Tags: https, ssl, mixed content, insecure content, force ssl, simple, secure, upload, proxy, load balancing, cache
 Contributors: jsmoriss
 Requires PHP: 7.2
-Requires At Least: 5.4
+Requires At Least: 5.5
 Tested Up To: 6.2.0
 Stable Tag: 3.4.1
 
@@ -76,7 +76,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Requires At Least**
 	* PHP v7.2.
-	* WordPress v5.4.
+	* WordPress v5.5.
 
 **Version 3.4.0 (2020/11/17)**
 
