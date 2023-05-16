@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: JSM's Force HTTP to HTTPS
+ * Plugin Name: JSM Force HTTP to HTTPS / SSL
  * Text Domain: jsm-force-ssl
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/jsm-force-ssl/
