@@ -57,8 +57,8 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 
 		public function __construct() {
 
-			$min_int = defined( 'PHP_INT_MIN' ) ? PHP_INT_MIN : -2147483648;    // Since PHP v7.0.0.
-			$max_int = defined( 'PHP_INT_MAX' ) ? PHP_INT_MAX : 2147483647;     // Since PHP 5.0.2.
+			$min_int = defined( 'PHP_INT_MIN' ) ? PHP_INT_MIN : -2147483648;	// Since PHP v7.0.0.
+			$max_int = defined( 'PHP_INT_MAX' ) ? PHP_INT_MAX : 2147483647;		// Since PHP 5.0.2.
 
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
