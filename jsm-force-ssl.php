@@ -262,7 +262,7 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 
 			if ( ! empty( $url ) ) {
 
-				if ( strpos( $url, '://' ) && 'https' === parse_url( $url, PHP_URL_SCHEME ) ) {
+				if ( strpos( $url, '://' ) && 'https' === wp_parse_url( $url, PHP_URL_SCHEME ) ) {
 
 					return $local_cache[ $url ] = true;
 				}
