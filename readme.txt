@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
-Tags: https, ssl, mixed content, insecure content, force ssl, simple, secure, upload, proxy, load balancing, cache
+Tags: mixed content, insecure content, force ssl, redirect, seo
 Contributors: jsmoriss
 Requires PHP: 7.2.34
 Requires At Least: 5.8
