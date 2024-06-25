@@ -12,7 +12,7 @@
  * Description: No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.
  * Requires PHP: 7.2.34
  * Requires At Least: 5.8
- * Tested Up To: 6.5.4
+ * Tested Up To: 6.5.5
  * Version: 3.4.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
