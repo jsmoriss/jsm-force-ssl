@@ -37,5 +37,5 @@
 
 <h4>Plugin Requirements</h4>
 
-<p>Your web server must already be configured with an SSL certificate and able to handle HTTPS request. ;-)</p>
+<p>Your web server must already be configured with an SSL certificate and able to handle HTTPS connections. ;-)</p>
 

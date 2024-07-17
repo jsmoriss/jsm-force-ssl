@@ -38,7 +38,7 @@ See [Web technology for developers &gt; HTTP &gt; HTTP headers &gt; X-Forwarded-
 
 = Plugin Requirements =
 
-Your web server must already be configured with an SSL certificate and able to handle HTTPS request. ;-)
+Your web server must already be configured with an SSL certificate and able to handle HTTPS connections. ;-)
 
 == Installation ==
 
