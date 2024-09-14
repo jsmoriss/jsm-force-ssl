@@ -8,8 +8,8 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
 Tags: mixed content, insecure content, force ssl, redirect, seo
 Contributors: jsmoriss
-Requires PHP: 7.2.34
-Requires At Least: 5.8
+Requires PHP: 7.4.33
+Requires At Least: 5.9
 Tested Up To: 6.6.2
 Stable Tag: 3.4.1
 
@@ -75,8 +75,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.8.
+	* PHP v7.4.33.
+	* WordPress v5.9.
 
 **Version 3.4.0 (2020/11/17)**
 
