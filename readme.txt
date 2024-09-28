@@ -64,41 +64,23 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.4.1 (2021/02/14)**
+**Version 3.5.0 (2024/09/28)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Minor update for readme text and copyright date.
+	* Improved PHP 'HTTP_HOST' and 'REQUEST_URI' server variable checks.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Updated `JsmForceSsl::force_ssl_redirect()` to use not empty() instead of isset().
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
 
-**Version 3.4.0 (2020/11/17)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Updated the actions and filter hooks to use PHP_INT_MIN and PHP_INT_MAX.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.0.
-	* WordPress v4.5.
-
 == Upgrade Notice ==
 
-= 3.4.1 =
+= 3.5.0 =
 
-(2021/02/14) Minor update for readme text and copyright date.
-
-= 3.4.0 =
-
-(2020/11/17) Updated the actions and filter hooks to use PHP_INT_MIN and PHP_INT_MAX.
+(2024/09/28) Improved PHP 'HTTP_HOST' and 'REQUEST_URI' server variable checks.
 
