@@ -127,9 +127,9 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 		public static function force_ssl_redirect() {
 
 			/*
-			 * Make sure web server variables exist in case WP is being used from the command line.
+			 * Make sure web server variables exist (and are not null) in case WP is being used from the command line.
 			 */
-			if ( isset( $_SERVER[ 'HTTP_HOST' ] ) && isset( $_SERVER[ 'REQUEST_URI' ] ) ) {
+			if ( ! empty( $_SERVER[ 'HTTP_HOST' ] ) && ! empty( $_SERVER[ 'REQUEST_URI' ] ) ) {
 
 				if ( ! self::is_https() ) {
 
