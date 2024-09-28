@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM Force HTTP to HTTPS</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.4.1</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.5.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.4.33 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.9 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.6.2</td></tr>
