@@ -69,7 +69,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Improved PHP 'HTTP_HOST' and 'REQUEST_URI' server variable checks.
+	* Improved PHP 'HTTP_HOST' and 'REQUEST_URI' server variable checks for command line execution.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -82,5 +82,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.5.0 =
 
-(2024/09/28) Improved PHP 'HTTP_HOST' and 'REQUEST_URI' server variable checks.
+(2024/09/28) Improved PHP 'HTTP_HOST' and 'REQUEST_URI' server variable checks for command line execution.
 
