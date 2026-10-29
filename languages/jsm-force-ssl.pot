@@ -12,6 +12,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
+
 #. Plugin Name of the plugin/theme
 msgid "JSM Force HTTP to HTTPS / SSL"
 msgstr ""
@@ -21,9 +22,7 @@ msgid "https://surniaulula.com/extend/plugins/jsm-force-ssl/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"No setup required - simply activate to force HTTP URLs to HTTPS using native "
-"WordPress filters and permanent redirects for best SEO."
+msgid "No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO."
 msgstr ""
 
 #. Author of the plugin/theme
